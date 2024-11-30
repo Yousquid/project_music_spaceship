@@ -5,9 +5,14 @@ using UnityEngine;
 public class instrument_Randomer : MonoBehaviour
 {
     public List<string> buttonAudioSourceList;
+    public List<GameObject> buttonGameobjectList;
+    public GameObject buttonPositionReference;
+    public GameObject buttonPrefab;
+    public float buttonInterval = 1.5f;
     // Start is called before the first frame update
     void Start()
     {
+        initiateButtons();
         initiateList();
     }
 
@@ -69,7 +74,14 @@ public class instrument_Randomer : MonoBehaviour
     }
 
     void initiateButtons()
-    { 
-    
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject button = Instantiate(buttonPrefab);
+            button.transform.position = buttonPositionReference.transform.position;
+            button.transform.position += new Vector3(buttonInterval*i,0,0);
+            buttonGameobjectList.Add(button);
+            button.transform.SetParent(this.transform);
+        }
     }
 }
