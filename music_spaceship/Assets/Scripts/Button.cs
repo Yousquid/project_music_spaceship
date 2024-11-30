@@ -30,11 +30,13 @@ public class Button : MonoBehaviour
   
     void Update()
     {
-        
+        buttonClickDetection();
     }
 
     public void OnButtonClicked()
     {
+        print("111");
+
         if (this.gameObject.layer == 0)
         {
             audioSourceCheckThenSetParameter(0);
@@ -61,34 +63,7 @@ public class Button : MonoBehaviour
             playSound();
         }
     }
-    /*void buttonPlaySound()
-    {
-        if (this.gameObject.layer == 0)
-        {
-            audioSourceCheckThenSetParameter(0);
-            playSound();
-        }
-        else if (this.gameObject.layer == 1)
-        {
-            audioSourceCheckThenSetParameter(1);
-            playSound();
-        }
-        else if(this.gameObject.layer == 2)
-        {
-            audioSourceCheckThenSetParameter(2);
-            playSound();
-        }
-        else if(this.gameObject.layer == 3)
-        {
-            audioSourceCheckThenSetParameter(3);
-            playSound();
-        }
-        else if(this.gameObject.layer == 4)
-        {
-            audioSourceCheckThenSetParameter(4);
-            playSound();
-        }
-    }*/
+    
 
     GameObject FindNearestWithTag(string tag)
     {
@@ -144,6 +119,20 @@ public class Button : MonoBehaviour
             if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
             {
                 frenchHornInstance.start();
+            }
+        }
+    }
+
+    void buttonClickDetection()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
+
+            if (hit.collider != null && hit.collider.gameObject == gameObject)
+            {
+                OnButtonClicked();
             }
         }
     }

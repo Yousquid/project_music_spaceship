@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5668924172122709150}
   - component: {fileID: 3914242510616375482}
   - component: {fileID: 3521246955033579498}
+  - component: {fileID: 3903451791228438734}
   m_Layer: 0
   m_Name: Button
   m_TagString: button
@@ -31,8 +32,7 @@ Transform:
   m_LocalPosition: {x: -3.12, y: -1.9, z: 0.038290728}
   m_LocalScale: {x: 8.043059, y: 8.043059, z: 8.043059}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1092614315835267311}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5668924172122709150
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5625717802379825812}
+      - m_Target: {fileID: 3521246955033579498}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: OnButtonClicked
         m_Mode: 1
@@ -164,56 +164,48 @@ MonoBehaviour:
       Data3: -1641637494
       Data4: 56704153
     Path: event:/french_horn_lower_pitch
---- !u!1 &7588244169658970503
-GameObject:
+--- !u!61 &3903451791228438734
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1092614315835267311}
-  - component: {fileID: 5625717802379825812}
-  m_Layer: 0
-  m_Name: Button_controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1092614315835267311
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7588244169658970503}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000000001389505}
-  m_LocalScale: {x: 0.1243308, y: 0.1243308, z: 0.1243308}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2510935257794233312}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5625717802379825812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7588244169658970503}
+  m_GameObject: {fileID: 1165329051225813421}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421bfc30aabfacb438d4c2f9778b967c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  buttonOrder: 0
-  frenchHornSound:
-    Guid:
-      Data1: 1788561596
-      Data2: 1197144222
-      Data3: -1641637494
-      Data4: 56704153
-    Path: event:/french_horn_lower_pitch
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
