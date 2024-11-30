@@ -47,4 +47,29 @@ public class instrument_Randomer : MonoBehaviour
             list[randomIndex] = temp;
         }
     }
+    GameObject FindNearestWithTag(string tag)
+    {
+        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
+        GameObject nearestObject = null;
+        float shortestDistance = Mathf.Infinity;
+        Vector3 currentPosition = this.transform.position;
+
+        foreach (GameObject obj in objectsWithTag)
+        {
+            float distanceToObj = Vector3.Distance(currentPosition, obj.transform.position);
+
+            if (distanceToObj < shortestDistance)
+            {
+                shortestDistance = distanceToObj;
+                nearestObject = obj;
+            }
+        }
+
+        return nearestObject;
+    }
+
+    void initiateButtons()
+    { 
+    
+    }
 }
