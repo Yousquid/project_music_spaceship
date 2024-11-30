@@ -5,11 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - button
+  - manager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - 111
   - Water
   - UI
   - 

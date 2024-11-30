@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMODUnity;
 
 public class instrument_Randomer : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class instrument_Randomer : MonoBehaviour
     public GameObject buttonPositionReference;
     public GameObject buttonPrefab;
     public float buttonInterval = 1.5f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -82,6 +84,7 @@ public class instrument_Randomer : MonoBehaviour
             button.transform.position += new Vector3(buttonInterval*i,0,0);
             buttonGameobjectList.Add(button);
             button.transform.SetParent(this.transform);
+            button.layer = i;
         }
     }
 }
