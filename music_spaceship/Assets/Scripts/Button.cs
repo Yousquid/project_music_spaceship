@@ -10,6 +10,8 @@ public class Button : MonoBehaviour
     public FMODUnity.EventReference frenchHornSound;
     FMOD.Studio.EventInstance frenchHornInstance;
     FMOD.Studio.PARAMETER_ID frenchHornInstanceID;
+    public Sprite sprite;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -37,27 +39,27 @@ public class Button : MonoBehaviour
     {
         print("111");
 
-        if (this.gameObject.layer == 0)
+        if (this.gameObject.layer == 6)
         {
             audioSourceCheckThenSetParameter(0);
             playSound();
         }
-        else if (this.gameObject.layer == 1)
+        else if (this.gameObject.layer == 7)
         {
             audioSourceCheckThenSetParameter(1);
             playSound();
         }
-        else if (this.gameObject.layer == 2)
+        else if (this.gameObject.layer == 8)
         {
             audioSourceCheckThenSetParameter(2);
             playSound();
         }
-        else if (this.gameObject.layer == 3)
+        else if (this.gameObject.layer == 9)
         {
             audioSourceCheckThenSetParameter(3);
             playSound();
         }
-        else if (this.gameObject.layer == 4)
+        else if (this.gameObject.layer == 10)
         {
             audioSourceCheckThenSetParameter(4);
             playSound();
@@ -125,13 +127,14 @@ public class Button : MonoBehaviour
 
     void buttonClickDetection()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // Left mouse click
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
+                Debug.Log("Button clicked!");
                 OnButtonClicked();
             }
         }

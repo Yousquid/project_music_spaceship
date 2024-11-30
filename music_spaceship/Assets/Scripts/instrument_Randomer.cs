@@ -84,7 +84,7 @@ public class instrument_Randomer : MonoBehaviour
             button.transform.position += new Vector3(buttonInterval*i,0,0);
             buttonGameobjectList.Add(button);
             button.transform.SetParent(this.transform);
-            button.layer = i;
+            button.layer = i+6;
         }
     }
 }
