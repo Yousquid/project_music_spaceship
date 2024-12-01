@@ -7,6 +7,7 @@ public class instrument_Randomer : MonoBehaviour
 {
     public List<string> buttonAudioSourceList;
     public List<GameObject> buttonGameobjectList;
+    public List<string> instrumentsSourceList;
     public GameObject buttonPositionReference;
     public GameObject buttonPrefab;
     public float buttonInterval = 1.5f;
@@ -14,8 +15,9 @@ public class instrument_Randomer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        initiateInstrumentList();
         initiateButtons();
-        initiateList();
+        initiatePitchList();
     }
 
     // Update is called once per frame
@@ -24,18 +26,15 @@ public class instrument_Randomer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             Shuffle(buttonAudioSourceList);
-           
+            Shuffle(instrumentsSourceList);
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            print(buttonAudioSourceList[1]);
-        }
-        
+       
+
     }
 
 
-    private void initiateList()
+    private void initiatePitchList()
     {
         buttonAudioSourceList.Add("Gong");
         buttonAudioSourceList.Add("Shang");
@@ -44,6 +43,19 @@ public class instrument_Randomer : MonoBehaviour
         buttonAudioSourceList.Add("Yu");
     }
 
+    private void initiateInstrumentList()
+    {
+        instrumentsSourceList.Add("frenchHornLow");
+        instrumentsSourceList.Add("frenchHornHigh");
+     /*   instrumentsSourceList.Add("3");
+        instrumentsSourceList.Add("4");
+        instrumentsSourceList.Add("5");
+        instrumentsSourceList.Add("6");
+        instrumentsSourceList.Add("7");
+        instrumentsSourceList.Add("8");
+        instrumentsSourceList.Add("9");
+        instrumentsSourceList.Add("10"); */
+    }
     void Shuffle<T>(List<T> list)
     {
         for (int i = list.Count - 1; i > 0; i--)

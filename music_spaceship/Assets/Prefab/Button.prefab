@@ -108,6 +108,14 @@ MonoBehaviour:
       Data3: -1641637494
       Data4: 56704153
     Path: event:/french_horn_lower_pitch
+  frenchHornHighSound:
+    Guid:
+      Data1: 1489734924
+      Data2: 1263803337
+      Data3: 1414012810
+      Data4: 995484841
+    Path: event:/french_horn_higher_pitch
+  sprite: {fileID: 0}
 --- !u!61 &3903451791228438734
 BoxCollider2D:
   m_ObjectHideFlags: 0

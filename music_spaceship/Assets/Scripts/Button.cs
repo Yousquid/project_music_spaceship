@@ -7,20 +7,30 @@ public class Button : MonoBehaviour
 {
     public instrument_Randomer manager;
     public int buttonOrder;
+
     public FMODUnity.EventReference frenchHornSound;
     FMOD.Studio.EventInstance frenchHornInstance;
     FMOD.Studio.PARAMETER_ID frenchHornInstanceID;
+
+    public FMODUnity.EventReference frenchHornHighSound;
+    FMOD.Studio.EventInstance frenchHornHighInstance;
+    FMOD.Studio.PARAMETER_ID frenchHornHighInstanceID;
+
+
     public Sprite sprite;
     
     // Start is called before the first frame update
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
-        frenchHornFMOD();
-
+        // frenchHornLowFMOD();
+        frenchHornInstance = initiateInstance(frenchHornSound, frenchHornInstance, frenchHornInstanceID,"french_horn");
+        frenchHornInstanceID = initiateInstanceID(frenchHornSound, frenchHornInstance, frenchHornInstanceID, "french_horn");
+        frenchHornHighInstance = initiateInstance(frenchHornHighSound, frenchHornHighInstance, frenchHornHighInstanceID,"french_horn_high");
+        frenchHornHighInstanceID = initiateInstanceID(frenchHornHighSound, frenchHornHighInstance, frenchHornHighInstanceID, "french_horn_high");
     }
 
-    void frenchHornFMOD()
+    void frenchHornLowFMOD()
     {
         frenchHornInstance = FMODUnity.RuntimeManager.CreateInstance(frenchHornSound);
         FMOD.Studio.EventDescription frenchHornSoundDescription;
@@ -29,7 +39,29 @@ public class Button : MonoBehaviour
         frenchHornSoundDescription.getParameterDescriptionByName("french_horn", out frenchHornPramaterDescription);
         frenchHornInstanceID = frenchHornPramaterDescription.id;
     }
-  
+
+    FMOD.Studio.EventInstance initiateInstance(FMODUnity.EventReference tempSound, FMOD.Studio.EventInstance tempInstance, FMOD.Studio.PARAMETER_ID tempID,string parameterName)
+    {
+        tempInstance = FMODUnity.RuntimeManager.CreateInstance(tempSound);
+        FMOD.Studio.EventDescription tempDescription;
+        tempInstance.getDescription(out tempDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION tempParameterDescription;
+        tempDescription.getParameterDescriptionByName(parameterName, out tempParameterDescription);
+        tempID = tempParameterDescription.id;
+        return tempInstance;
+    }
+
+    FMOD.Studio.PARAMETER_ID initiateInstanceID(FMODUnity.EventReference tempSound, FMOD.Studio.EventInstance tempInstance, FMOD.Studio.PARAMETER_ID tempID, string parameterName)
+    {
+        tempInstance = FMODUnity.RuntimeManager.CreateInstance(tempSound);
+        FMOD.Studio.EventDescription tempDescription;
+        tempInstance.getDescription(out tempDescription);
+        FMOD.Studio.PARAMETER_DESCRIPTION tempParameterDescription;
+        tempDescription.getParameterDescriptionByName(parameterName, out tempParameterDescription);
+        tempID = tempParameterDescription.id;
+        return tempID;
+    }
+
     void Update()
     {
         buttonClickDetection();
@@ -37,32 +69,32 @@ public class Button : MonoBehaviour
 
     public void OnButtonClicked()
     {
-        print("111");
+      
 
         if (this.gameObject.layer == 6)
         {
-            audioSourceCheckThenSetParameter(0);
-            playSound();
+            print(manager.buttonAudioSourceList[0]);
+            audioSourceCheckThenSetParameterPlaySound(0);
         }
         else if (this.gameObject.layer == 7)
         {
-            audioSourceCheckThenSetParameter(1);
-            playSound();
+            print(manager.buttonAudioSourceList[1]);
+            audioSourceCheckThenSetParameterPlaySound(1);
         }
         else if (this.gameObject.layer == 8)
         {
-            audioSourceCheckThenSetParameter(2);
-            playSound();
+            print(manager.buttonAudioSourceList[2]);
+            audioSourceCheckThenSetParameterPlaySound(2);
         }
         else if (this.gameObject.layer == 9)
         {
-            audioSourceCheckThenSetParameter(3);
-            playSound();
+            print(manager.buttonAudioSourceList[3]);
+            audioSourceCheckThenSetParameterPlaySound(3);
         }
         else if (this.gameObject.layer == 10)
         {
-            audioSourceCheckThenSetParameter(4);
-            playSound();
+            print(manager.buttonAudioSourceList[4]);
+            audioSourceCheckThenSetParameterPlaySound(4);
         }
     }
     
@@ -88,39 +120,139 @@ public class Button : MonoBehaviour
         return nearestObject;
     }
 
-    void audioSourceCheckThenSetParameter( int buttonOrder )
+    void audioSourceCheckThenSetParameterPlaySound( int buttonOrder )
     {
+        FMOD.Studio.EventInstance tempInstance;
+
+        tempInstance = instrumentAssign();
+
         if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
         {
-            frenchHornInstance.setParameterByID(frenchHornInstanceID, 1);
+            tempInstance.setParameterByID(findInstrumentAudioSourceID(), 1);
+            playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
         {
-            frenchHornInstance.setParameterByID(frenchHornInstanceID, 2);
+            tempInstance.setParameterByID(findInstrumentAudioSourceID(), 2);
+            playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
         {
-            frenchHornInstance.setParameterByID(frenchHornInstanceID, 3);
+            tempInstance.setParameterByID(findInstrumentAudioSourceID(), 3);
+            playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
         {
-            frenchHornInstance.setParameterByID(frenchHornInstanceID, 4);
+            tempInstance.setParameterByID(findInstrumentAudioSourceID(), 4);
+            playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
         {
-            frenchHornInstance.setParameterByID(frenchHornInstanceID, 5);
+            tempInstance.setParameterByID(findInstrumentAudioSourceID(), 5);
+            playSound(tempInstance);
         }
     }
 
-    void playSound()
+
+    FMOD.Studio.PARAMETER_ID findInstrumentAudioSourceID()
     {
-        if (frenchHornInstance.isValid())
+        if (manager.instrumentsSourceList[0] == "frenchHornLow")
+        {
+            return frenchHornInstanceID;
+        }
+        else if (manager.instrumentsSourceList[0] == "frenchHornHigh")
+        {
+            return frenchHornHighInstanceID;
+        }
+        /* else if (manager.instrumentsSourceList[0] == "3")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "4")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "5")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "6")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "7")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "8")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "9")
+         {
+             return frenchHornHighInstance;
+         }
+         else if (manager.instrumentsSourceList[0] == "10")
+         {
+             return frenchHornHighInstance;
+         } */
+        else { return frenchHornHighInstanceID; }
+    }
+
+    FMOD.Studio.EventInstance instrumentAssign()
+    {
+        if (manager.instrumentsSourceList[0] == "frenchHornLow")
+        {
+            return frenchHornInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "frenchHornHigh")
+        {
+            return frenchHornHighInstance;
+        }
+       /* else if (manager.instrumentsSourceList[0] == "3")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "4")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "5")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "6")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "7")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "8")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "9")
+        {
+            return frenchHornHighInstance;
+        }
+        else if (manager.instrumentsSourceList[0] == "10")
+        {
+            return frenchHornHighInstance;
+        } */
+        else { return frenchHornHighInstance; }
+    }
+
+    void playSound(FMOD.Studio.EventInstance tempInstance)
+    {
+        if (tempInstance.isValid())
         {
             FMOD.Studio.PLAYBACK_STATE playbackstate;
-            frenchHornInstance.getPlaybackState(out playbackstate);
+            tempInstance.getPlaybackState(out playbackstate);
             if (playbackstate == FMOD.Studio.PLAYBACK_STATE.STOPPED)
             {
-                frenchHornInstance.start();
+                tempInstance.start();
             }
         }
     }

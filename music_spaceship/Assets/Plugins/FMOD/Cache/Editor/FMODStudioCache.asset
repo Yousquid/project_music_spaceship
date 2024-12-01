@@ -1,5 +1,33 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5900007892264516264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/french_horn_higher_pitch
+  m_EditorClassIdentifier: 
+  Path: event:/french_horn_higher_pitch
+  Guid:
+    Data1: 1489734924
+    Data2: 1263803337
+    Data3: 1414012810
+    Data4: 995484841
+  Banks:
+  - {fileID: 6485206459271478334}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3440435367190205783}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2250
 --- !u!114 &-3534261746854796893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +43,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638686247958123799
+  lastModified: 638687073713533437
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -38,12 +66,13 @@ MonoBehaviour:
   - {fileID: -3534261746854796893}
   EditorEvents:
   - {fileID: 1751285272461901508}
+  - {fileID: -5900007892264516264}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3534261746854796893}
   StringsBanks:
   - {fileID: 4178894571893586347}
-  cacheTime: 638686247959502058
+  cacheTime: 638687073713552575
   cacheVersion: 131621
 --- !u!114 &1751285272461901508
 MonoBehaviour:
@@ -73,6 +102,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 560
+--- !u!114 &3440435367190205783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/french_horn_higher_pitch/french_horn_high
+  m_EditorClassIdentifier: 
+  Name: french_horn_high
+  StudioPath: 
+  Min: 1
+  Max: 5
+  Default: 1
+  ID:
+    data1: 2567600100
+    data2: 4226583658
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4178894571893586347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,10 +141,10 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638686247958143817
+  lastModified: 638687073713552575
   FileSizes:
   - Name: Desktop
-    Value: 880
+    Value: 982
   Exists: 1
 --- !u!114 &6485206459271478334
 MonoBehaviour:
@@ -108,10 +161,10 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/French_Horn.bank
   Name: French_Horn
   StudioPath: bank:/French_Horn
-  lastModified: 638686247959502058
+  lastModified: 638687073713402716
   FileSizes:
   - Name: Desktop
-    Value: 89952
+    Value: 182464
   Exists: 1
 --- !u!114 &8775297617647166309
 MonoBehaviour:
