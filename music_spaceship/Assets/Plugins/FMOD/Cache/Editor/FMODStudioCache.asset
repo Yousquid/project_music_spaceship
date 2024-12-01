@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638687073713533437
+  lastModified: 638686701598995639
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: -3534261746854796893}
   StringsBanks:
   - {fileID: 4178894571893586347}
-  cacheTime: 638687136919677681
+  cacheTime: 638686701599005739
   cacheVersion: 131621
 --- !u!114 &1751285272461901508
 MonoBehaviour:
@@ -141,7 +141,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638687073713552575
+  lastModified: 638686701599005739
   FileSizes:
   - Name: Desktop
     Value: 982
@@ -161,7 +161,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/French_Horn.bank
   Name: French_Horn
   StudioPath: bank:/French_Horn
-  lastModified: 638687136919677681
+  lastModified: 638686701598930552
   FileSizes:
   - Name: Desktop
     Value: 182464
