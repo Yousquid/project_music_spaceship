@@ -27,7 +27,7 @@ MonoBehaviour:
   - {fileID: 3440435367190205783}
   MinDistance: 1
   MaxDistance: 20
-  Length: 2250
+  Length: 600
 --- !u!114 &-3534261746854796893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: -3534261746854796893}
   StringsBanks:
   - {fileID: 4178894571893586347}
-  cacheTime: 638687073713552575
+  cacheTime: 638687136919677681
   cacheVersion: 131621
 --- !u!114 &1751285272461901508
 MonoBehaviour:
@@ -161,7 +161,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/French_Horn.bank
   Name: French_Horn
   StudioPath: bank:/French_Horn
-  lastModified: 638687073713402716
+  lastModified: 638687136919677681
   FileSizes:
   - Name: Desktop
     Value: 182464

@@ -69,31 +69,24 @@ public class Button : MonoBehaviour
 
     public void OnButtonClicked()
     {
-      
-
         if (this.gameObject.layer == 6)
         {
-            print(manager.buttonAudioSourceList[0]);
             audioSourceCheckThenSetParameterPlaySound(0);
         }
         else if (this.gameObject.layer == 7)
         {
-            print(manager.buttonAudioSourceList[1]);
             audioSourceCheckThenSetParameterPlaySound(1);
         }
         else if (this.gameObject.layer == 8)
         {
-            print(manager.buttonAudioSourceList[2]);
             audioSourceCheckThenSetParameterPlaySound(2);
         }
         else if (this.gameObject.layer == 9)
         {
-            print(manager.buttonAudioSourceList[3]);
             audioSourceCheckThenSetParameterPlaySound(3);
         }
         else if (this.gameObject.layer == 10)
         {
-            print(manager.buttonAudioSourceList[4]);
             audioSourceCheckThenSetParameterPlaySound(4);
         }
     }
@@ -128,26 +121,31 @@ public class Button : MonoBehaviour
 
         if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
         {
+            print(manager.buttonAudioSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 1);
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
         {
+            print(manager.buttonAudioSourceList[1]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 2);
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
         {
+            print(manager.buttonAudioSourceList[2]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 3);
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
         {
+            print(manager.buttonAudioSourceList[3]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 4);
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
         {
+            print(manager.buttonAudioSourceList[4]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 5);
             playSound(tempInstance);
         }
@@ -266,7 +264,6 @@ public class Button : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                Debug.Log("Button clicked!");
                 OnButtonClicked();
             }
         }
