@@ -76,10 +76,10 @@ public class instrument_Randomer : MonoBehaviour
     void initialateInputList()
     {
         playerInputList.Add("0");
-        playerInputList.Add("1");
-        playerInputList.Add("2");
-        playerInputList.Add("3");
-        playerInputList.Add("4");
+        playerInputList.Add("0");
+        playerInputList.Add("0");
+        playerInputList.Add("0");
+        playerInputList.Add("0");
     }
 
     void initiateButtons()
@@ -98,6 +98,11 @@ public class instrument_Randomer : MonoBehaviour
     public void recordPlayerInputTrue()
     {
         isRecordPlayerInput = true;
+    }
+
+    void resetInputList()
+    {
+        playerInputList.Clear();
     }
 
 }

@@ -72,28 +72,28 @@ public class Button : MonoBehaviour
         if (this.gameObject.layer == 6)
         {
             audioSourceCheckThenSetParameterPlaySound(0);
-            recordButtonInputToManager(0);
+            recordButtonInputToManager(0,0);
 
         }
         else if (this.gameObject.layer == 7)
         {
             audioSourceCheckThenSetParameterPlaySound(1);
-            recordButtonInputToManager(1);
+            recordButtonInputToManager(1,1);
         }
         else if (this.gameObject.layer == 8)
         {
             audioSourceCheckThenSetParameterPlaySound(2);
-            recordButtonInputToManager(2);
+            recordButtonInputToManager(2,2);
         }
         else if (this.gameObject.layer == 9)
         {
             audioSourceCheckThenSetParameterPlaySound(3);
-            recordButtonInputToManager(3);
+            recordButtonInputToManager(3,3);
         }
         else if (this.gameObject.layer == 10)
         {
             audioSourceCheckThenSetParameterPlaySound(4);
-            recordButtonInputToManager(4);
+            recordButtonInputToManager(4,10);
         }
     }
     
@@ -275,27 +275,86 @@ public class Button : MonoBehaviour
         }
     }
 
-    void recordButtonInputToManager(int buttonOrder)
+    void recordButtonInputToManager(int buttonOrder, int inputOrder)
     {
-        if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
+        if (manager.isRecordPlayerInput)
         {
-            manager.playerInputList[buttonOrder] = "Gong";
-        }
-        if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
-        {
-            manager.playerInputList[buttonOrder] = "Shang";
-        }
-        if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
-        {
-            manager.playerInputList[buttonOrder] = "Jue";
-        }
-        if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
-        {
-            manager.playerInputList[buttonOrder] = "Zhi";
-        }
-        if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
-        {
-            manager.playerInputList[buttonOrder] = "Yu";
+
+            if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (manager.playerInputList[i] != "0")
+                    {
+                        continue;
+                    }
+                    else if (manager.playerInputList[i] == "0")
+                    {
+                        manager.playerInputList[i] = "Gong";
+                        break;
+                    }
+                }
+            }
+            if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (manager.playerInputList[i] != "0")
+                    {
+                        continue;
+                    }
+                    else if (manager.playerInputList[i] == "0")
+                    {
+                        manager.playerInputList[i] = "Shang";
+                        break;
+                    }
+                }
+            }
+            if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (manager.playerInputList[i] != "0")
+                    {
+                        continue;
+                    }
+                    else if (manager.playerInputList[i] == "0")
+                    {
+                        manager.playerInputList[i] = "Jue";
+                        break;
+                    }
+                }
+            }
+            if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (manager.playerInputList[i] != "0")
+                    {
+                        continue;
+                    }
+                    else if (manager.playerInputList[i] == "0")
+                    {
+                        manager.playerInputList[i] = "Zhi";
+                        break;
+                    }
+                }
+            }
+            if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (manager.playerInputList[i] != "0")
+                    {
+                        continue;
+                    }
+                    else if (manager.playerInputList[i] == "0")
+                    {
+                        manager.playerInputList[i] = "Yu";
+                        break;
+                    }
+                }
+            }
         }
     }
 
