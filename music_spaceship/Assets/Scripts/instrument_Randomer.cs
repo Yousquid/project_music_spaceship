@@ -11,10 +11,13 @@ public class instrument_Randomer : MonoBehaviour
     public GameObject buttonPositionReference;
     public GameObject buttonPrefab;
     public float buttonInterval = 1.5f;
+    public bool isRecordPlayerInput = false;
+    public List<string> playerInputList;
 
     // Start is called before the first frame update
     void Start()
     {
+        initialateInputList();
         initiateInstrumentList();
         initiateButtons();
         initiatePitchList();
@@ -29,7 +32,10 @@ public class instrument_Randomer : MonoBehaviour
             Shuffle(instrumentsSourceList);
         }
 
-       
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            print(playerInputList[0]+ playerInputList[1]+ playerInputList[2]+ playerInputList[3] +playerInputList[4]);
+        }
 
     }
 
@@ -66,25 +72,14 @@ public class instrument_Randomer : MonoBehaviour
             list[randomIndex] = temp;
         }
     }
-    GameObject FindNearestWithTag(string tag)
+
+    void initialateInputList()
     {
-        GameObject[] objectsWithTag = GameObject.FindGameObjectsWithTag(tag);
-        GameObject nearestObject = null;
-        float shortestDistance = Mathf.Infinity;
-        Vector3 currentPosition = this.transform.position;
-
-        foreach (GameObject obj in objectsWithTag)
-        {
-            float distanceToObj = Vector3.Distance(currentPosition, obj.transform.position);
-
-            if (distanceToObj < shortestDistance)
-            {
-                shortestDistance = distanceToObj;
-                nearestObject = obj;
-            }
-        }
-
-        return nearestObject;
+        playerInputList.Add("0");
+        playerInputList.Add("1");
+        playerInputList.Add("2");
+        playerInputList.Add("3");
+        playerInputList.Add("4");
     }
 
     void initiateButtons()
@@ -99,4 +94,10 @@ public class instrument_Randomer : MonoBehaviour
             button.layer = i+6;
         }
     }
+
+    public void recordPlayerInputTrue()
+    {
+        isRecordPlayerInput = true;
+    }
+
 }
