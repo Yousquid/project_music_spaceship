@@ -72,22 +72,28 @@ public class Button : MonoBehaviour
         if (this.gameObject.layer == 6)
         {
             audioSourceCheckThenSetParameterPlaySound(0);
+            recordButtonInputToManager(0);
+
         }
         else if (this.gameObject.layer == 7)
         {
             audioSourceCheckThenSetParameterPlaySound(1);
+            recordButtonInputToManager(1);
         }
         else if (this.gameObject.layer == 8)
         {
             audioSourceCheckThenSetParameterPlaySound(2);
+            recordButtonInputToManager(2);
         }
         else if (this.gameObject.layer == 9)
         {
             audioSourceCheckThenSetParameterPlaySound(3);
+            recordButtonInputToManager(3);
         }
         else if (this.gameObject.layer == 10)
         {
             audioSourceCheckThenSetParameterPlaySound(4);
+            recordButtonInputToManager(4);
         }
     }
     
@@ -257,7 +263,7 @@ public class Button : MonoBehaviour
 
     void buttonClickDetection()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse click
+        if (Input.GetMouseButtonDown(0)) 
         {
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
@@ -268,4 +274,29 @@ public class Button : MonoBehaviour
             }
         }
     }
+
+    void recordButtonInputToManager(int buttonOrder)
+    {
+        if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
+        {
+            manager.playerInputList[buttonOrder] = "Gong";
+        }
+        if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
+        {
+            manager.playerInputList[buttonOrder] = "Shang";
+        }
+        if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
+        {
+            manager.playerInputList[buttonOrder] = "Jue";
+        }
+        if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
+        {
+            manager.playerInputList[buttonOrder] = "Zhi";
+        }
+        if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
+        {
+            manager.playerInputList[buttonOrder] = "Yu";
+        }
+    }
+
 }
