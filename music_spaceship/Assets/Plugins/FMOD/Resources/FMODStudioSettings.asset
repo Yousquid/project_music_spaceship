@@ -551,7 +551,11 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Bass
+  - Flute
   - French_Horn
+  - Guzheng
+  - Violin
   BanksToLoad: []
   LiveUpdatePort: 9264
   EnableMemoryTracking: 0
