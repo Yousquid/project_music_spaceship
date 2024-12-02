@@ -16,9 +16,44 @@ public class Button : MonoBehaviour
     FMOD.Studio.EventInstance frenchHornHighInstance;
     FMOD.Studio.PARAMETER_ID frenchHornHighInstanceID;
 
+    public FMODUnity.EventReference bassLowSound;
+    FMOD.Studio.EventInstance bassLowInstance;
+    FMOD.Studio.PARAMETER_ID bassLowInstanceID;
+
+    public FMODUnity.EventReference bassHighSound;
+    FMOD.Studio.EventInstance bassHighInstance;
+    FMOD.Studio.PARAMETER_ID bassHighInstanceID;
+
+    public FMODUnity.EventReference fluteLowSound;
+    FMOD.Studio.EventInstance fluteLowInstance;
+    FMOD.Studio.PARAMETER_ID fluteLowInstanceID;
+
+    public FMODUnity.EventReference fluteHighSound;
+    FMOD.Studio.EventInstance fluteHighInstance;
+    FMOD.Studio.PARAMETER_ID fluteHighInstanceID;
+
+    public FMODUnity.EventReference guzhengLowSound;
+    FMOD.Studio.EventInstance guzhengLowInstance;
+    FMOD.Studio.PARAMETER_ID guzhengLowInstanceID;
+
+    public FMODUnity.EventReference guzhengHighSound;
+    FMOD.Studio.EventInstance guzhengHighInstance;
+    FMOD.Studio.PARAMETER_ID guzhengHighInstanceID;
+
+    public FMODUnity.EventReference violinLowSound;
+    FMOD.Studio.EventInstance violinLowInstance;
+    FMOD.Studio.PARAMETER_ID violinLowInstanceID;
+
+    public FMODUnity.EventReference violinHighSound;
+    FMOD.Studio.EventInstance violinHighInstance;
+    FMOD.Studio.PARAMETER_ID violinHighInstanceID;
+
+    public FMOD.Studio.EventInstance currentMusicInstance;
 
     public Sprite sprite;
-    
+
+    bool hasStopped = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +61,24 @@ public class Button : MonoBehaviour
         // frenchHornLowFMOD();
         frenchHornInstance = initiateInstance(frenchHornSound, frenchHornInstance, frenchHornInstanceID,"french_horn");
         frenchHornInstanceID = initiateInstanceID(frenchHornSound, frenchHornInstance, frenchHornInstanceID, "french_horn");
+
         frenchHornHighInstance = initiateInstance(frenchHornHighSound, frenchHornHighInstance, frenchHornHighInstanceID,"french_horn_high");
         frenchHornHighInstanceID = initiateInstanceID(frenchHornHighSound, frenchHornHighInstance, frenchHornHighInstanceID, "french_horn_high");
+
+        fluteLowInstance = initiateInstance(fluteLowSound, fluteLowInstance, fluteLowInstanceID,"flute_low");
+        fluteLowInstanceID = initiateInstanceID(fluteLowSound, fluteLowInstance, fluteLowInstanceID, "flute_low");
+
+        fluteHighInstance = initiateInstance(fluteHighSound, fluteHighInstance, fluteHighInstanceID, "flute_high");
+        fluteHighInstanceID = initiateInstanceID(fluteHighSound, fluteHighInstance, fluteHighInstanceID, "flute_high");
+
+        guzhengLowInstance = initiateInstance(guzhengLowSound, guzhengLowInstance, guzhengLowInstanceID, "guzheng_low");
+        guzhengLowInstanceID = initiateInstanceID(guzhengLowSound, guzhengLowInstance, guzhengLowInstanceID, "guzheng_high");
+
+        violinLowInstance = initiateInstance(violinLowSound, violinLowInstance, violinLowInstanceID,"violin_low");
+        violinLowInstanceID = initiateInstanceID(violinLowSound, violinLowInstance, violinLowInstanceID, "violin_low");
+
+        violinHighInstance = initiateInstance(violinHighSound, violinHighInstance, violinHighInstanceID, "violin_high");
+        violinHighInstanceID = initiateInstanceID(violinHighSound, violinHighInstance, violinHighInstanceID, "violin_high");
     }
 
     void frenchHornLowFMOD()
@@ -69,31 +120,46 @@ public class Button : MonoBehaviour
 
     public void OnButtonClicked()
     {
+      /*  if (currentMusicInstance.isValid() && !hasStopped)
+        {
+            FMOD.Studio.PLAYBACK_STATE playbackState;
+            currentMusicInstance.getPlaybackState(out playbackState);
+
+            if (playbackState != FMOD.Studio.PLAYBACK_STATE.STOPPED)
+            {
+                currentMusicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                currentMusicInstance.release(); // Release the instance to free resources
+                hasStopped = true;
+            }
+        } */
+
+        manager.detectIfInputListIsFull();
+
         if (this.gameObject.layer == 6)
         {
             audioSourceCheckThenSetParameterPlaySound(0);
-            recordButtonInputToManager(0,0);
+            recordButtonInputToManager(0);
 
         }
         else if (this.gameObject.layer == 7)
         {
             audioSourceCheckThenSetParameterPlaySound(1);
-            recordButtonInputToManager(1,1);
+            recordButtonInputToManager(1);
         }
         else if (this.gameObject.layer == 8)
         {
             audioSourceCheckThenSetParameterPlaySound(2);
-            recordButtonInputToManager(2,2);
+            recordButtonInputToManager(2);
         }
         else if (this.gameObject.layer == 9)
         {
             audioSourceCheckThenSetParameterPlaySound(3);
-            recordButtonInputToManager(3,3);
+            recordButtonInputToManager(3);
         }
         else if (this.gameObject.layer == 10)
         {
             audioSourceCheckThenSetParameterPlaySound(4);
-            recordButtonInputToManager(4,10);
+            recordButtonInputToManager(4);
         }
     }
     
@@ -121,6 +187,7 @@ public class Button : MonoBehaviour
 
     void audioSourceCheckThenSetParameterPlaySound( int buttonOrder )
     {
+
         FMOD.Studio.EventInstance tempInstance;
 
         tempInstance = instrumentAssign();
@@ -129,30 +196,35 @@ public class Button : MonoBehaviour
         {
             print(manager.buttonAudioSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 1);
+            currentMusicInstance = tempInstance;
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
         {
             print(manager.buttonAudioSourceList[1]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 2);
+            currentMusicInstance = tempInstance;
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
         {
             print(manager.buttonAudioSourceList[2]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 3);
+            currentMusicInstance = tempInstance;
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
         {
             print(manager.buttonAudioSourceList[3]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 4);
+            currentMusicInstance = tempInstance;
             playSound(tempInstance);
         }
         if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
         {
             print(manager.buttonAudioSourceList[4]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 5);
+            currentMusicInstance = tempInstance;
             playSound(tempInstance);
         }
     }
@@ -168,38 +240,38 @@ public class Button : MonoBehaviour
         {
             return frenchHornHighInstanceID;
         }
-        /* else if (manager.instrumentsSourceList[0] == "3")
+        else if (manager.instrumentsSourceList[0] == "bassLow")
          {
-             return frenchHornHighInstance;
+             return bassLowInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "4")
+         else if (manager.instrumentsSourceList[0] == "bassHigh")
          {
-             return frenchHornHighInstance;
+             return bassHighInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "5")
+         else if (manager.instrumentsSourceList[0] == "fluteLow")
          {
-             return frenchHornHighInstance;
+             return fluteLowInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "6")
+         else if (manager.instrumentsSourceList[0] == "fluteHigh")
          {
-             return frenchHornHighInstance;
+             return fluteHighInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "7")
+         else if (manager.instrumentsSourceList[0] == "guzhengLow")
          {
-             return frenchHornHighInstance;
+             return guzhengLowInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "8")
+         else if (manager.instrumentsSourceList[0] == "guzhengHigh")
          {
-             return frenchHornHighInstance;
+             return guzhengHighInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "9")
+         else if (manager.instrumentsSourceList[0] == "violinLow")
          {
-             return frenchHornHighInstance;
+             return violinLowInstanceID;
          }
-         else if (manager.instrumentsSourceList[0] == "10")
+         else if (manager.instrumentsSourceList[0] == "violinHigh")
          {
-             return frenchHornHighInstance;
-         } */
+             return violinHighInstanceID;
+         } 
         else { return frenchHornHighInstanceID; }
     }
 
@@ -213,38 +285,38 @@ public class Button : MonoBehaviour
         {
             return frenchHornHighInstance;
         }
-       /* else if (manager.instrumentsSourceList[0] == "3")
+        else if (manager.instrumentsSourceList[0] == "bassLow")
         {
-            return frenchHornHighInstance;
+            return bassLowInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "4")
+        else if (manager.instrumentsSourceList[0] == "bassHigh")
         {
-            return frenchHornHighInstance;
+            return bassHighInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "5")
+        else if (manager.instrumentsSourceList[0] == "fluteLow")
         {
-            return frenchHornHighInstance;
+            return fluteLowInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "6")
+        else if (manager.instrumentsSourceList[0] == "fluteHigh")
         {
-            return frenchHornHighInstance;
+            return fluteHighInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "7")
+        else if (manager.instrumentsSourceList[0] == "guzhengLow")
         {
-            return frenchHornHighInstance;
+            return guzhengLowInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "8")
+        else if (manager.instrumentsSourceList[0] == "guzhengHigh")
         {
-            return frenchHornHighInstance;
+            return guzhengHighInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "9")
+        else if (manager.instrumentsSourceList[0] == "violinLow")
         {
-            return frenchHornHighInstance;
+            return violinLowInstance;
         }
-        else if (manager.instrumentsSourceList[0] == "10")
+        else if (manager.instrumentsSourceList[0] == "violinHigh")
         {
-            return frenchHornHighInstance;
-        } */
+            return violinHighInstance;
+        }
         else { return frenchHornHighInstance; }
     }
 
@@ -275,9 +347,9 @@ public class Button : MonoBehaviour
         }
     }
 
-    void recordButtonInputToManager(int buttonOrder, int inputOrder)
+    void recordButtonInputToManager(int buttonOrder)
     {
-        if (manager.isRecordPlayerInput)
+        if (manager.playerInputBool())
         {
 
             if (manager.buttonAudioSourceList[buttonOrder] == "Gong")

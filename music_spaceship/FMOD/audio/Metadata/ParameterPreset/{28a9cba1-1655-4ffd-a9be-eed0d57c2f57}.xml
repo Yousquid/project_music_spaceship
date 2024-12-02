@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{28a9cba1-1655-4ffd-a9be-eed0d57c2f57}">
+		<property name="name">
+			<value>violin_low</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8867c331-0c44-479e-b48b-cbf4a22fa0b5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{7f73d992-2ff1-466b-bac5-92a1a49578bf}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{7f73d992-2ff1-466b-bac5-92a1a49578bf}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

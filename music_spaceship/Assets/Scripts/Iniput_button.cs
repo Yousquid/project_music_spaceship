@@ -26,7 +26,15 @@ public class Iniput_button : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                manager.recordPlayerInputTrue();
+                if (manager.playerInputBool())
+                {
+                    manager.resetInputList();
+                    manager.recordPlayerInputFlase();
+                }
+                else if (!manager.playerInputBool())
+                {
+                    manager.recordPlayerInputTrue();
+                }
             }
         }
     }
