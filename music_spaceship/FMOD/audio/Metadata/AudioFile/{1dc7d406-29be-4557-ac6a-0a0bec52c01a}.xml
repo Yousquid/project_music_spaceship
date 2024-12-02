@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{1dc7d406-29be-4557-ac6a-0a0bec52c01a}">
+		<property name="assetPath">
+			<value>flute_gong2.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.2067346938775509</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f82f5a51-9ef0-434f-9606-816091da68a6}</destination>
+		</relationship>
+	</object>
+</objects>

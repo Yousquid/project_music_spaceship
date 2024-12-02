@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{be1b70fb-6477-4f09-85e2-8ad9b37f6d02}">
+		<property name="name">
+			<value>guzheng_high</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8867c331-0c44-479e-b48b-cbf4a22fa0b5}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{01118851-f576-42e5-87cc-106bd2f66ddd}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{01118851-f576-42e5-87cc-106bd2f66ddd}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>6</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

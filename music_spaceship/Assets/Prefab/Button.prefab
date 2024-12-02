@@ -115,6 +115,62 @@ MonoBehaviour:
       Data3: 1414012810
       Data4: 995484841
     Path: event:/french_horn_higher_pitch
+  bassLowSound:
+    Guid:
+      Data1: 1689405359
+      Data2: 1244700285
+      Data3: -2006599490
+      Data4: 144338207
+    Path: event:/bass_low_pitch
+  bassHighSound:
+    Guid:
+      Data1: -2096796672
+      Data2: 1296434943
+      Data3: 357180294
+      Data4: 1969078671
+    Path: event:/bass_high_pitch
+  fluteLowSound:
+    Guid:
+      Data1: -1424355987
+      Data2: 1193550097
+      Data3: -556225909
+      Data4: 1974884831
+    Path: event:/flute_low_pitch
+  fluteHighSound:
+    Guid:
+      Data1: -560330335
+      Data2: 1265585267
+      Data3: 1633538185
+      Data4: 866867330
+    Path: event:/flute_high_pitch
+  guzhengLowSound:
+    Guid:
+      Data1: -400646797
+      Data2: 1183610378
+      Data3: 1669723316
+      Data4: 1255028609
+    Path: event:/guzheng_low_pitch
+  guzhengHighSound:
+    Guid:
+      Data1: -1072590975
+      Data2: 1093468706
+      Data3: -2030339676
+      Data4: -919559407
+    Path: event:/guzheng_high_pitch
+  violinLowSound:
+    Guid:
+      Data1: -1502296226
+      Data2: 1339246183
+      Data3: -256554062
+      Data4: -887330098
+    Path: event:/violin_low_pitch
+  violinHighSound:
+    Guid:
+      Data1: -265554390
+      Data2: 1201948711
+      Data3: -1787672905
+      Data4: -237031002
+    Path: event:/violin_high_pitch
   sprite: {fileID: 0}
 --- !u!61 &3903451791228438734
 BoxCollider2D:

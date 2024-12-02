@@ -36,6 +36,10 @@ public class instrument_Randomer : MonoBehaviour
         {
             print(playerInputList[0]+ playerInputList[1]+ playerInputList[2]+ playerInputList[3] +playerInputList[4]);
         }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            resetInputList();
+        }
 
     }
 
@@ -53,14 +57,14 @@ public class instrument_Randomer : MonoBehaviour
     {
         instrumentsSourceList.Add("frenchHornLow");
         instrumentsSourceList.Add("frenchHornHigh");
-     /*   instrumentsSourceList.Add("3");
-        instrumentsSourceList.Add("4");
-        instrumentsSourceList.Add("5");
-        instrumentsSourceList.Add("6");
-        instrumentsSourceList.Add("7");
-        instrumentsSourceList.Add("8");
-        instrumentsSourceList.Add("9");
-        instrumentsSourceList.Add("10"); */
+        instrumentsSourceList.Add("bassLow");
+        instrumentsSourceList.Add("bassHigh");
+        instrumentsSourceList.Add("fluteLow");
+        instrumentsSourceList.Add("fluteHigh");
+        instrumentsSourceList.Add("guzhengLow");
+        instrumentsSourceList.Add("guzhengHigh");
+        instrumentsSourceList.Add("violinLow");
+        instrumentsSourceList.Add("violinHigh"); 
     }
     void Shuffle<T>(List<T> list)
     {
@@ -76,10 +80,10 @@ public class instrument_Randomer : MonoBehaviour
     void initialateInputList()
     {
         playerInputList.Add("0");
-        playerInputList.Add("1");
-        playerInputList.Add("2");
-        playerInputList.Add("3");
-        playerInputList.Add("4");
+        playerInputList.Add("0");
+        playerInputList.Add("0");
+        playerInputList.Add("0");
+        playerInputList.Add("0");
     }
 
     void initiateButtons()
@@ -98,6 +102,33 @@ public class instrument_Randomer : MonoBehaviour
     public void recordPlayerInputTrue()
     {
         isRecordPlayerInput = true;
+    }
+
+    public void recordPlayerInputFlase()
+    {
+        isRecordPlayerInput = false;
+    }
+
+    public bool playerInputBool()
+    {
+        return isRecordPlayerInput;
+    }
+
+    public void resetInputList()
+    {
+        playerInputList[0] = "0";
+        playerInputList[1] = "0";
+        playerInputList[2] = "0";
+        playerInputList[3] = "0";
+        playerInputList[4] = "0";
+    }
+
+    public void detectIfInputListIsFull()
+    {
+        if (playerInputList.Count == 5 && playerInputList[4] != "0")
+        {
+            resetInputList();
+        }
     }
 
 }

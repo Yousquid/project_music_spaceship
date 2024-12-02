@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{959f1916-6e20-44c6-96c6-7779e609bc1f}">
+		<property name="assetPath">
+			<value>violin_gong.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.25</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f82f5a51-9ef0-434f-9606-816091da68a6}</destination>
+		</relationship>
+	</object>
+</objects>
