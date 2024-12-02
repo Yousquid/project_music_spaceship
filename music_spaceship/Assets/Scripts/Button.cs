@@ -48,6 +48,8 @@ public class Button : MonoBehaviour
     FMOD.Studio.EventInstance violinHighInstance;
     FMOD.Studio.PARAMETER_ID violinHighInstanceID;
 
+
+
     public FMOD.Studio.EventInstance currentMusicInstance;
 
     public Sprite sprite;
@@ -72,13 +74,22 @@ public class Button : MonoBehaviour
         fluteHighInstanceID = initiateInstanceID(fluteHighSound, fluteHighInstance, fluteHighInstanceID, "flute_high");
 
         guzhengLowInstance = initiateInstance(guzhengLowSound, guzhengLowInstance, guzhengLowInstanceID, "guzheng_low");
-        guzhengLowInstanceID = initiateInstanceID(guzhengLowSound, guzhengLowInstance, guzhengLowInstanceID, "guzheng_high");
+        guzhengLowInstanceID = initiateInstanceID(guzhengLowSound, guzhengLowInstance, guzhengLowInstanceID, "guzheng_low");
+
+        guzhengHighInstance = initiateInstance(guzhengHighSound, guzhengHighInstance, guzhengHighInstanceID, "guzheng_high");
+        guzhengHighInstanceID = initiateInstanceID(guzhengHighSound, guzhengHighInstance, guzhengHighInstanceID, "guzheng_high");
 
         violinLowInstance = initiateInstance(violinLowSound, violinLowInstance, violinLowInstanceID,"violin_low");
         violinLowInstanceID = initiateInstanceID(violinLowSound, violinLowInstance, violinLowInstanceID, "violin_low");
 
         violinHighInstance = initiateInstance(violinHighSound, violinHighInstance, violinHighInstanceID, "violin_high");
         violinHighInstanceID = initiateInstanceID(violinHighSound, violinHighInstance, violinHighInstanceID, "violin_high");
+
+        bassLowInstance = initiateInstance(bassLowSound, bassLowInstance, bassLowInstanceID,"bass_low");
+        bassLowInstanceID = initiateInstanceID(bassLowSound, bassLowInstance, bassLowInstanceID, "bass_low");
+
+        bassHighInstance = initiateInstance(bassHighSound, bassHighInstance, bassHighInstanceID, "bass_high");
+        bassHighInstanceID = initiateInstanceID(bassHighSound, bassHighInstance, bassHighInstanceID, "bass_high");
     }
 
     void frenchHornLowFMOD()
@@ -195,6 +206,7 @@ public class Button : MonoBehaviour
         if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
         {
             print(manager.buttonAudioSourceList[0]);
+            print(manager.instrumentsSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 1);
             currentMusicInstance = tempInstance;
             playSound(tempInstance);
@@ -202,6 +214,7 @@ public class Button : MonoBehaviour
         if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
         {
             print(manager.buttonAudioSourceList[1]);
+            print(manager.instrumentsSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 2);
             currentMusicInstance = tempInstance;
             playSound(tempInstance);
@@ -209,6 +222,7 @@ public class Button : MonoBehaviour
         if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
         {
             print(manager.buttonAudioSourceList[2]);
+            print(manager.instrumentsSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 3);
             currentMusicInstance = tempInstance;
             playSound(tempInstance);
@@ -216,6 +230,7 @@ public class Button : MonoBehaviour
         if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
         {
             print(manager.buttonAudioSourceList[3]);
+            print(manager.instrumentsSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 4);
             currentMusicInstance = tempInstance;
             playSound(tempInstance);
@@ -223,6 +238,7 @@ public class Button : MonoBehaviour
         if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
         {
             print(manager.buttonAudioSourceList[4]);
+            print(manager.instrumentsSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 5);
             currentMusicInstance = tempInstance;
             playSound(tempInstance);
