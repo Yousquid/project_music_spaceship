@@ -154,7 +154,7 @@ public class Button : MonoBehaviour
         }
         else if (this.gameObject.layer == 0)
         {
-            print("drum");
+            print("Drum");
             FMODUnity.RuntimeManager.PlayOneShot(drumSound);
             recordButtonInputToManager(1);
         }

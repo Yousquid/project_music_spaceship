@@ -13,6 +13,7 @@ public class instrument_Randomer : MonoBehaviour
     public float buttonInterval = 1.5f;
     public bool isRecordPlayerInput = false;
     public List<string> playerInputList;
+    public bool isCheckingAnswer = false;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,8 @@ public class instrument_Randomer : MonoBehaviour
         {
             resetInputList();
         }
+
+        isRecordPlayerInput = true;
 
     }
 
@@ -129,6 +132,45 @@ public class instrument_Randomer : MonoBehaviour
         {
             resetInputList();
         }
+    }
+
+    public string CheckAnswer()
+    {
+        if (isCheckingAnswer)
+        {
+            if (playerInputList[0] == "Gong" && playerInputList[1] == "Shang" && playerInputList[2] == "Jue" && playerInputList[3] == "Zhi" && playerInputList[4] == "Yu")
+            {
+                return "forward";
+            }
+            else if (playerInputList[0] == "Jue" && playerInputList[1] == "Zhi" && playerInputList[2] == "Yu" && playerInputList[3] == "Drum" && playerInputList[4] == "Gong")
+            {
+                return "left";
+            }
+            else if (playerInputList[0] == "Yu" && playerInputList[1] == "Zhi" && playerInputList[2] == "Jue" && playerInputList[3] == "Drum" && playerInputList[4] == "Shang")
+            {
+                return "right";
+            }
+            else if (playerInputList[0] == "Gong" && playerInputList[1] == "Drum" && playerInputList[2] == "Jue" && playerInputList[3] == "Drum" && playerInputList[4] == "Yu")
+            {
+                return "shoot";
+            }
+            else { return "error"; }
+        }
+         else { return "0"; }
+    }
+
+    public bool IsCheckingAnswer()
+    {
+        return isCheckingAnswer;
+    }
+    public void SetCheckingAnswerTrue()
+    {
+        isCheckingAnswer = true;
+    }
+    public void SetCheckingAnswerFalse()
+    {
+        isCheckingAnswer = false;
+        resetInputList();
     }
 
 }

@@ -14,6 +14,7 @@ public class Iniput_button : MonoBehaviour
     void Update()
     {
         buttonClickDetection();
+       
     }
 
 
@@ -26,15 +27,20 @@ public class Iniput_button : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                if (manager.playerInputBool())
+                for (int i = 0; i < 5; i++)
                 {
-                    manager.resetInputList();
-                    manager.recordPlayerInputFlase();
+                    if (manager.playerInputList[i] != "0")
+                    {
+                        continue;
+                    }
+                    else if (manager.playerInputList[i] == "0")
+                    {
+                        return;
+                    }
                 }
-                else if (!manager.playerInputBool())
-                {
-                    manager.recordPlayerInputTrue();
-                }
+
+                manager.SetCheckingAnswerTrue();
+
             }
         }
     }
