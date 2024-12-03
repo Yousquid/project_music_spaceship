@@ -171,6 +171,13 @@ MonoBehaviour:
       Data3: -1787672905
       Data4: -237031002
     Path: event:/violin_high_pitch
+  drumSound:
+    Guid:
+      Data1: -410280438
+      Data2: 1249284127
+      Data3: 1351497130
+      Data4: 1124538551
+    Path: event:/drum
   sprite: {fileID: 0}
 --- !u!61 &3903451791228438734
 BoxCollider2D:

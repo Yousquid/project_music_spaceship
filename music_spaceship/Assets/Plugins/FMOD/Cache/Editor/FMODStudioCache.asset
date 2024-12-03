@@ -67,7 +67,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Bass.bank
   Name: Bass
   StudioPath: bank:/Bass
-  lastModified: 638687454355498480
+  lastModified: 638688849693807601
   FileSizes:
   - Name: Desktop
     Value: 168352
@@ -200,6 +200,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 360
+--- !u!114 &-4365549246425392784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Drum.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/audio/Build/Desktop/Drum.bank
+  Name: Drum
+  StudioPath: bank:/Drum
+  lastModified: 638688849701020858
+  FileSizes:
+  - Name: Desktop
+    Value: 18752
+  Exists: 1
 --- !u!114 &-3534261746854796893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -215,7 +235,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638687454360490470
+  lastModified: 638688849699124148
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -235,7 +255,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Flute.bank
   Name: Flute
   StudioPath: bank:/Flute
-  lastModified: 638687454356989452
+  lastModified: 638688849695234348
   FileSizes:
   - Name: Desktop
     Value: 174976
@@ -388,6 +408,7 @@ MonoBehaviour:
   - {fileID: -2825043429553127351}
   - {fileID: 1031677376825282768}
   - {fileID: 8164666076363224865}
+  - {fileID: -4365549246425392784}
   EditorEvents:
   - {fileID: 1751285272461901508}
   - {fileID: -5900007892264516264}
@@ -399,12 +420,13 @@ MonoBehaviour:
   - {fileID: -7006168916820049490}
   - {fileID: 9058209879836382817}
   - {fileID: -8846893488775328105}
+  - {fileID: 8940578797879093203}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3534261746854796893}
   StringsBanks:
   - {fileID: 4178894571893586347}
-  cacheTime: 638687454361782205
+  cacheTime: 638688849701020858
   cacheVersion: 131621
 --- !u!114 &1031677376825282768
 MonoBehaviour:
@@ -421,7 +443,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Guzheng.bank
   Name: Guzheng
   StudioPath: bank:/Guzheng
-  lastModified: 638687454360444634
+  lastModified: 638688849698989353
   FileSizes:
   - Name: Desktop
     Value: 610816
@@ -517,10 +539,10 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638687454360500624
+  lastModified: 638688849699134156
   FileSizes:
   - Name: Desktop
-    Value: 1932
+    Value: 2002
   Exists: 1
 --- !u!114 &4335902253102401397
 MonoBehaviour:
@@ -565,7 +587,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/French_Horn.bank
   Name: French_Horn
   StudioPath: bank:/French_Horn
-  lastModified: 638687454357526046
+  lastModified: 638688849695890199
   FileSizes:
   - Name: Desktop
     Value: 182464
@@ -613,7 +635,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Violin.bank
   Name: Violin
   StudioPath: bank:/Violin
-  lastModified: 638687454361782205
+  lastModified: 638688849700382609
   FileSizes:
   - Name: Desktop
     Value: 229632
@@ -670,6 +692,33 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8940578797879093203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/drum
+  m_EditorClassIdentifier: 
+  Path: event:/drum
+  Guid:
+    Data1: -410280438
+    Data2: 1249284127
+    Data3: 1351497130
+    Data4: 1124538551
+  Banks:
+  - {fileID: -4365549246425392784}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 300
 --- !u!114 &9058209879836382817
 MonoBehaviour:
   m_ObjectHideFlags: 0
