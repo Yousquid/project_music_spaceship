@@ -22,6 +22,7 @@ public class instrument_Randomer : MonoBehaviour
         initiateInstrumentList();
         initiateButtons();
         initiatePitchList();
+        ResetAudioSource();
     }
 
     // Update is called once per frame
@@ -29,8 +30,7 @@ public class instrument_Randomer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Shuffle(buttonAudioSourceList);
-            Shuffle(instrumentsSourceList);
+            
         }
 
         if (Input.GetKeyDown(KeyCode.B))
@@ -46,7 +46,11 @@ public class instrument_Randomer : MonoBehaviour
 
     }
 
-
+    public void ResetAudioSource()
+    {
+        Shuffle(buttonAudioSourceList);
+        Shuffle(instrumentsSourceList);
+    }
     private void initiatePitchList()
     {
         buttonAudioSourceList.Add("Gong");

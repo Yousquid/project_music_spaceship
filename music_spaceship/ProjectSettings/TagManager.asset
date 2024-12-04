@@ -6,6 +6,7 @@ TagManager:
   tags:
   - button
   - manager
+  - spaceship
   layers:
   - Default
   - TransparentFX

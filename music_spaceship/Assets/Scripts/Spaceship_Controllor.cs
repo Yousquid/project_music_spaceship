@@ -5,13 +5,11 @@ using UnityEngine;
 public class Spaceship_Controllor : MonoBehaviour
 {
     private instrument_Randomer manager;
-    private float facing_hor;
-    private float facing_vert;
     private string facing_direction;
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
-
+        facing_direction = "up";
     }
 
     // Update is called once per frame
@@ -20,6 +18,11 @@ public class Spaceship_Controllor : MonoBehaviour
         moveSpaceship();
         RotationFix();
         DirectionDetect();
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            print(GiveDirection());
+        }
     }
 
     GameObject FindNearestWithTag(string tag)
@@ -48,22 +51,23 @@ public class Spaceship_Controllor : MonoBehaviour
     {
         if (manager.CheckAnswer() == "forward")
         {
-            this.transform.position += new Vector3(facing_hor, facing_vert, 0);
-            manager.SetCheckingAnswerFalse();
+
         }
         if (manager.CheckAnswer() == "left")
         {
             this.transform.Rotate(0,0,90);
             manager.SetCheckingAnswerFalse();
+            manager.ResetAudioSource();
         }
         if (manager.CheckAnswer() == "right")
         {
             this.transform.Rotate(0, 0, -90);
             manager.SetCheckingAnswerFalse();
+            manager.ResetAudioSource();
         }
         if (manager.CheckAnswer() == "shoot")
         {
-
+            manager.ResetAudioSource();
         }
         if (manager.CheckAnswer() == "error")
         {
@@ -73,25 +77,21 @@ public class Spaceship_Controllor : MonoBehaviour
 
     void DirectionDetect()
     {
-        if (this.transform.rotation.z == 90)
+        if (this.transform.eulerAngles.z == 90)
         {
-            facing_hor = -1;
-            facing_vert = 0;
+            facing_direction = "left";
         }
-        if (this.transform.rotation.z == -90)
+        if (this.transform.eulerAngles.z == -90)
         {
-            facing_hor = 1;
-            facing_vert = 0;
+            facing_direction = "right";
         }
-        if (this.transform.rotation.z == 0)
+        if (this.transform.eulerAngles.z == 0)
         {
-            facing_vert = 1;
-            facing_hor = 0;
+            facing_direction = "up";
         }
-        if (this.transform.rotation.z == 180 || this.transform.rotation.z == -180)
+        if (this.transform.eulerAngles.z == 180 || this.transform.eulerAngles.z == -180)
         {
-            facing_vert = -1;
-            facing_hor = 0;
+            facing_direction = "down";
         }
 
     }
@@ -105,5 +105,10 @@ public class Spaceship_Controllor : MonoBehaviour
         {
             this.transform.Rotate(0, 0, 360);
         }
+    }
+
+    public string GiveDirection()
+    {
+        return facing_direction;
     }
 }
