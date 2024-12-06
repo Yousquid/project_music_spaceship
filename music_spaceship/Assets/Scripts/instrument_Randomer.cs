@@ -21,6 +21,7 @@ public class instrument_Randomer : MonoBehaviour
     public float indicatorInterval;
     public List<GameObject> indicatorList;
 
+    public FMODUnity.EventReference bgm;
     // Start is called before the first frame update
     void Start()
     {    
@@ -30,6 +31,7 @@ public class instrument_Randomer : MonoBehaviour
         ResetAudioSource();
         initialateInputList();
         InitiateIndicators();
+        FMODUnity.RuntimeManager.PlayOneShot(bgm);
     }
 
     // Update is called once per frame

@@ -556,6 +556,7 @@ MonoBehaviour:
   - Flute
   - French_Horn
   - Guzheng
+  - UI
   - Violin
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -235,7 +235,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638688849699124148
+  lastModified: 638691453539595877
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -409,6 +409,7 @@ MonoBehaviour:
   - {fileID: 1031677376825282768}
   - {fileID: 8164666076363224865}
   - {fileID: -4365549246425392784}
+  - {fileID: 2132901615234682103}
   EditorEvents:
   - {fileID: 1751285272461901508}
   - {fileID: -5900007892264516264}
@@ -421,12 +422,13 @@ MonoBehaviour:
   - {fileID: 9058209879836382817}
   - {fileID: -8846893488775328105}
   - {fileID: 8940578797879093203}
+  - {fileID: 9026649914968776758}
   EditorParameters: []
   MasterBanks:
   - {fileID: -3534261746854796893}
   StringsBanks:
   - {fileID: 4178894571893586347}
-  cacheTime: 638688849701020858
+  cacheTime: 638691455265679142
   cacheVersion: 131621
 --- !u!114 &1031677376825282768
 MonoBehaviour:
@@ -500,6 +502,26 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2132901615234682103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/UI.bank
+  m_EditorClassIdentifier: 
+  Path: FMOD/audio/Build/Desktop/UI.bank
+  Name: UI
+  StudioPath: bank:/UI
+  lastModified: 638691455265679142
+  FileSizes:
+  - Name: Desktop
+    Value: 185824
+  Exists: 1
 --- !u!114 &3440435367190205783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -539,10 +561,10 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638688849699134156
+  lastModified: 638691453539605933
   FileSizes:
   - Name: Desktop
-    Value: 2002
+    Value: 2092
   Exists: 1
 --- !u!114 &4335902253102401397
 MonoBehaviour:
@@ -719,6 +741,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 300
+--- !u!114 &9026649914968776758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/background_music
+  m_EditorClassIdentifier: 
+  Path: event:/background_music
+  Guid:
+    Data1: 1666449543
+    Data2: 1134919106
+    Data3: -15945319
+    Data4: -514065649
+  Banks:
+  - {fileID: 2132901615234682103}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 17461
 --- !u!114 &9058209879836382817
 MonoBehaviour:
   m_ObjectHideFlags: 0
