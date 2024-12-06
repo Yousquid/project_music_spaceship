@@ -72,7 +72,7 @@ public class Spaceship_Controllor : MonoBehaviour
         {
             manager.ResetAudioSource();
         }
-        if (manager.CheckAnswer() == "error")
+        if (manager.CheckAnswer() == "error" && manager.detectIfInputListIsFull())
         {
             manager.SetCheckingAnswerFalse();
         }

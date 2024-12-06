@@ -27,19 +27,19 @@ public class Iniput_button : MonoBehaviour
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (manager.playerInputList[i] != "0")
-                    {
-                        continue;
-                    }
-                    else if (manager.playerInputList[i] == "0")
-                    {
-                        return;
-                    }
-                }
+                //for (int i = 0; i < 5; i++)
+                //{
+                //    if (manager.playerInputList[i] != "0")
+                //    {
+                //        continue;
+                //    }
+                //    else if (manager.playerInputList[i] == "0")
+                //    {
+                //        return;
+                //    }
+                //}
 
-                manager.SetCheckingAnswerTrue();
+                manager.resetInputList();
 
             }
         }

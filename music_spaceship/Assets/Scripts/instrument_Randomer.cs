@@ -13,16 +13,23 @@ public class instrument_Randomer : MonoBehaviour
     public float buttonInterval = 1.5f;
     public bool isRecordPlayerInput = false;
     public List<string> playerInputList;
-    public bool isCheckingAnswer = false;
+    public bool isCheckingAnswer;
+
+    //For Indicator
+    public GameObject indicator;
+    public Transform reference;
+    public float indicatorInterval;
+    public List<GameObject> indicatorList;
 
     // Start is called before the first frame update
     void Start()
-    {
-        initialateInputList();
+    {    
         initiateInstrumentList();
         initiateButtons();
         initiatePitchList();
         ResetAudioSource();
+        initialateInputList();
+        InitiateIndicators();
     }
 
     // Update is called once per frame
@@ -37,12 +44,9 @@ public class instrument_Randomer : MonoBehaviour
         {
             print(playerInputList[0]+ playerInputList[1]+ playerInputList[2]+ playerInputList[3] +playerInputList[4]);
         }
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            resetInputList();
-        }
-
         isRecordPlayerInput = true;
+
+        manageIndicators();
 
     }
 
@@ -130,18 +134,18 @@ public class instrument_Randomer : MonoBehaviour
         playerInputList[4] = "0";
     }
 
-    public void detectIfInputListIsFull()
+    public bool detectIfInputListIsFull()
     {
         if (playerInputList.Count == 5 && playerInputList[4] != "0")
         {
-            resetInputList();
+            return true;
         }
+        else return false;
     }
 
     public string CheckAnswer()
     {
-        if (isCheckingAnswer)
-        {
+      
             if (playerInputList[0] == "Gong" && playerInputList[1] == "Shang" && playerInputList[2] == "Jue" && playerInputList[3] == "Zhi" && playerInputList[4] == "Yu")
             {
                 return "forward";
@@ -160,8 +164,8 @@ public class instrument_Randomer : MonoBehaviour
             }
             else { return "error"; }
         }
-         else { return "0"; }
-    }
+     
+    
 
     public bool IsCheckingAnswer()
     {
@@ -176,5 +180,32 @@ public class instrument_Randomer : MonoBehaviour
         isCheckingAnswer = false;
         resetInputList();
     }
+    void InitiateIndicators()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject temp_indicator = Instantiate(indicator);
+            temp_indicator.transform.position = reference.position;
+            temp_indicator.transform.position += new Vector3(indicatorInterval * i, 0, 0);
+            indicatorList.Add(temp_indicator);
+            temp_indicator.transform.SetParent(this.transform);
+            temp_indicator.layer = i + 6;
+        }
+    }
+
+    void manageIndicators()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (playerInputList[i] != "0")
+            {
+                indicatorList[i].SetActive(true);
+            }
+            else
+            {
+                indicatorList[i].SetActive(false);
+            }
+        }
+     }
 
 }
