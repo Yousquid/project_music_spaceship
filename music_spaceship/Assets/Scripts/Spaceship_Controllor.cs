@@ -6,10 +6,13 @@ public class Spaceship_Controllor : MonoBehaviour
 {
     private instrument_Randomer manager;
     private string facing_direction;
+    float zAngle;
+
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
         facing_direction = "up";
+        zAngle = this.transform.eulerAngles.z;
     }
 
     // Update is called once per frame
@@ -53,13 +56,13 @@ public class Spaceship_Controllor : MonoBehaviour
         {
 
         }
-        if (manager.CheckAnswer() == "left")
+        if (manager.CheckAnswer() == "left" )
         {
             this.transform.Rotate(0,0,90);
             manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
         }
-        if (manager.CheckAnswer() == "right")
+        if (manager.CheckAnswer() == "right" )
         {
             this.transform.Rotate(0, 0, -90);
             manager.SetCheckingAnswerFalse();
@@ -81,7 +84,7 @@ public class Spaceship_Controllor : MonoBehaviour
         {
             facing_direction = "left";
         }
-        if (this.transform.eulerAngles.z == -90)
+        if (this.transform.eulerAngles.z == 270)
         {
             facing_direction = "right";
         }
