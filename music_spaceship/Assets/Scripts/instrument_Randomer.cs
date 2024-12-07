@@ -50,6 +50,11 @@ public class instrument_Randomer : MonoBehaviour
 
         manageIndicators();
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
     }
 
     public void ResetAudioSource()
