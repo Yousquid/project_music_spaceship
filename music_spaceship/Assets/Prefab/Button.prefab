@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3521246955033579498}
   - component: {fileID: 9164121230705030125}
   - component: {fileID: 915175867087889873}
+  - component: {fileID: -257941052499873747}
   m_Layer: 0
   m_Name: Button
   m_TagString: button
@@ -102,6 +103,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
   buttonOrder: 0
+  audio_manager: {fileID: 0}
   frenchHornSound:
     Guid:
       Data1: 1788561596
@@ -328,6 +330,27 @@ PolygonCollider2D:
       - {x: 1.8, y: -2.7}
       - {x: 1.88, y: -2.57}
   m_UseDelaunayMesh: 0
+--- !u!95 &-257941052499873747
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165329051225813421}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a5e4b4df13cde004ba85d04ed60d4707, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5713627762151286058
 GameObject:
   m_ObjectHideFlags: 0

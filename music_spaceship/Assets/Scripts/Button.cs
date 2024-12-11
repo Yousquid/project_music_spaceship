@@ -57,9 +57,13 @@ public class Button : MonoBehaviour
 
     bool hasStopped = false;
 
+    private Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animator>();
+
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
 
         audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
@@ -126,6 +130,7 @@ public class Button : MonoBehaviour
 
     public void OnButtonClicked()
     {
+        anim.SetTrigger("Press");
         manager.detectIfInputListIsFull();
 
         if (this.gameObject.layer == 6)

@@ -1356,6 +1356,7 @@ GameObject:
   - component: {fileID: 519562548}
   - component: {fileID: 519562547}
   - component: {fileID: 519562550}
+  - component: {fileID: 519562551}
   m_Layer: 0
   m_Name: Input_Button
   m_TagString: Untagged
@@ -1583,6 +1584,27 @@ PolygonCollider2D:
       - {x: 0.42, y: -3.7099998}
       - {x: 0.71999997, y: -3.6899998}
   m_UseDelaunayMesh: 0
+--- !u!95 &519562551
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519562546}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ffe61bcc48d14c34cad2e47b9201b899, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &537162482
 PrefabInstance:
   m_ObjectHideFlags: 0
