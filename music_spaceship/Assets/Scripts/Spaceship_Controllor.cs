@@ -16,6 +16,7 @@ public class Spaceship_Controllor : MonoBehaviour
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
         facing_direction = "up";
         zAngle = this.transform.eulerAngles.z;
+        direction = Vector2.up;
     }
 
     // Update is called once per frame
@@ -92,7 +93,7 @@ public class Spaceship_Controllor : MonoBehaviour
             facing_direction = "left";
             direction = Vector2.left;
         }
-        if (this.transform.eulerAngles.z == 270)
+        if (this.transform.eulerAngles.z == 270 || this.transform.eulerAngles.z == -90)
         {
             facing_direction = "right";
             direction = Vector2.right;
@@ -130,7 +131,7 @@ public class Spaceship_Controllor : MonoBehaviour
     {
         RaycastHit2D frontRay;
 
-        frontRay = Physics2D.Raycast(transform.position, transform.TransformDirection(direction), distanceCheck,layerMask);
+        frontRay = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), distanceCheck,layerMask);
 
         if (frontRay)
         {
