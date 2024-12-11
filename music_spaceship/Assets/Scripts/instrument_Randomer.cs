@@ -15,7 +15,7 @@ public class instrument_Randomer : MonoBehaviour
     public List<string> playerInputList;
     public bool isCheckingAnswer;
     public Audio_Manager audio_manager;
-
+    public List<string> colorList;
     //For Indicator
     public GameObject indicator;
     public Transform reference;
@@ -34,6 +34,7 @@ public class instrument_Randomer : MonoBehaviour
         initialateInputList();
        // InitiateIndicators();
         FMODUnity.RuntimeManager.PlayOneShot(bgm);
+        initiateColorList();
     }
 
     // Update is called once per frame
@@ -64,6 +65,7 @@ public class instrument_Randomer : MonoBehaviour
         audio_manager.playCorrectSFX();
         Shuffle(buttonAudioSourceList);
         Shuffle(instrumentsSourceList);
+        Shuffle(colorList);
     }
     private void initiatePitchList()
     {
@@ -74,6 +76,14 @@ public class instrument_Randomer : MonoBehaviour
         buttonAudioSourceList.Add("Yu");
     }
 
+    private void initiateColorList()
+    {
+        colorList.Add("red");
+        colorList.Add("green");
+        colorList.Add("blue");
+        colorList.Add("yellow");
+        colorList.Add("purple");
+    }
     private void initiateInstrumentList()
     {
         instrumentsSourceList.Add("frenchHornLow");
