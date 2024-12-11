@@ -569,6 +569,7 @@ MonoBehaviour:
   playerInputList: []
   isCheckingAnswer: 0
   audio_manager: {fileID: 0}
+  colorList: []
   indicator: {fileID: 4269463178111275548, guid: f5f71c96a9610c043adf2099db1354d0, type: 3}
   reference: {fileID: 1562228579}
   indicatorInterval: 1.5
@@ -3244,6 +3245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2febc70d97d9eaa4ab0eb9217dccdbf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  facing_direction: 
   bullet: {fileID: 1637039694170872710, guid: 7aec277490ff46f46ad727746def9faa, type: 3}
   distanceCheck: 1.5
   layerMask:
@@ -3739,8 +3741,8 @@ Transform:
   m_GameObject: {fileID: 1529301482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 8.765974e-15, w: 1}
-  m_LocalPosition: {x: 0.0214, y: -0.1382, z: 0.61}
-  m_LocalScale: {x: 38.883858, y: 41.56923, z: 0.7780773}
+  m_LocalPosition: {x: -0.0187, y: -0.1075, z: 0.61}
+  m_LocalScale: {x: 38.483356, y: 40.404644, z: 0.7700631}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1246748816}
