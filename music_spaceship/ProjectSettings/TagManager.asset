@@ -9,6 +9,7 @@ TagManager:
   - spaceship
   - bullet
   - asteroid
+  - panel_circle
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - button_five
   - asteroids
   - Indicator
-  - 
+  - Mark
   - 
   - 
   - 

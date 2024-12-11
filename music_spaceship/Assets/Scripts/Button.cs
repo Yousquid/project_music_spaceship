@@ -9,6 +9,8 @@ public class Button : MonoBehaviour
     public int buttonOrder;
     public Audio_Manager audio_manager;
 
+    public SpriteRenderer sprite;
+
     public FMODUnity.EventReference frenchHornSound;
     FMOD.Studio.EventInstance frenchHornInstance;
     FMOD.Studio.PARAMETER_ID frenchHornInstanceID;
@@ -53,8 +55,6 @@ public class Button : MonoBehaviour
 
     public FMOD.Studio.EventInstance currentMusicInstance;
 
-    public Sprite sprite;
-
     bool hasStopped = false;
 
     // Start is called before the first frame update
@@ -93,6 +93,8 @@ public class Button : MonoBehaviour
 
         bassHighInstance = initiateInstance(bassHighSound, bassHighInstance, bassHighInstanceID, "bass_high");
         bassHighInstanceID = initiateInstanceID(bassHighSound, bassHighInstance, bassHighInstanceID, "bass_high");
+
+        sprite = GetComponent<SpriteRenderer>();
     }
 
     
@@ -122,6 +124,7 @@ public class Button : MonoBehaviour
     void Update()
     {
         buttonClickDetection();
+        changeColor();
     }
 
     public void OnButtonClicked()
@@ -340,12 +343,13 @@ public class Button : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            audio_manager.playButtonSound();
+            
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
+                audio_manager.playButtonSound();
                 OnButtonClicked();
             }
         }
@@ -457,4 +461,51 @@ public class Button : MonoBehaviour
         // }
     }
 
+    void changeColor()
+    {
+        if (this.gameObject.layer == 6)
+        {
+            colorListDection(0);
+        }
+        if (this.gameObject.layer == 7)
+        {
+            colorListDection(1);
+        }
+        if (this.gameObject.layer == 8)
+        {
+            colorListDection(2);
+        }
+        if (this.gameObject.layer == 9)
+        {
+            colorListDection(3);
+        }
+        if (this.gameObject.layer == 10)
+        {
+            colorListDection(4);
+        }
+    }
+
+    void colorListDection(int order)
+    {
+        if (manager.colorList[order] == "red")
+        {
+            sprite.color = new Color(255, 0, 0);
+        }
+        if (manager.colorList[order] == "green")
+        {
+            sprite.color = new Color(0, 255, 0);
+        }
+        if (manager.colorList[order] == "blue")
+        {
+            sprite.color = new Color(0, 0, 255);
+        }
+        if (manager.colorList[order] == "purple")
+        {
+            sprite.color = new Color(255, 0, 255);
+        }
+        if (manager.colorList[order] == "yellow")
+        {
+            sprite.color = new Color(255, 255, 0);
+        }
+    }
 }
