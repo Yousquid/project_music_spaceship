@@ -7,6 +7,7 @@ public class Spaceship_Controllor : MonoBehaviour
     private instrument_Randomer manager;
     private string facing_direction;
     float zAngle;
+    public GameObject bullet;
 
     void Start()
     {
@@ -70,6 +71,8 @@ public class Spaceship_Controllor : MonoBehaviour
         }
         if (manager.CheckAnswer() == "shoot")
         {
+            Instantiate(bullet);
+            manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
         }
         if (manager.CheckAnswer() == "error" && manager.detectIfInputListIsFull())
