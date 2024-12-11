@@ -26,11 +26,11 @@ public class instrument_Randomer : MonoBehaviour
     void Start()
     {    
         initiateInstrumentList();
-        initiateButtons();
+     //   initiateButtons();
         initiatePitchList();
         ResetAudioSource();
         initialateInputList();
-        InitiateIndicators();
+       // InitiateIndicators();
         FMODUnity.RuntimeManager.PlayOneShot(bgm);
     }
 
@@ -48,7 +48,7 @@ public class instrument_Randomer : MonoBehaviour
         }
         isRecordPlayerInput = true;
 
-        manageIndicators();
+        //manageIndicators();
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -200,19 +200,22 @@ public class instrument_Randomer : MonoBehaviour
         }
     }
 
-    void manageIndicators()
+    public int returnManageIndicators()
     {
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i <= 5; i++)
         {
             if (playerInputList[i] != "0")
             {
-                indicatorList[i].SetActive(true);
+                continue;
+
             }
-            else
+            else if (playerInputList[i] == "0")
             {
-                indicatorList[i].SetActive(false);
+                return i;
             }
         }
+
+        return -1;
      }
 
 }
