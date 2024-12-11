@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spaceship_Controllor : MonoBehaviour
 {
     private instrument_Randomer manager;
-    private string facing_direction;
+    public string facing_direction;
     float zAngle;
     public GameObject bullet;
     public float distanceCheck = 1.5f;
@@ -18,7 +18,8 @@ public class Spaceship_Controllor : MonoBehaviour
         audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
         facing_direction = "up";
         zAngle = this.transform.eulerAngles.z;
-        direction = Vector2.up;
+        direction = new Vector2(0, 1);
+
     }
 
     // Update is called once per frame
@@ -28,9 +29,11 @@ public class Spaceship_Controllor : MonoBehaviour
         RotationFix();
         DirectionDetect();
 
+        print(GiveDirection());
+
         if (Input.GetKeyDown(KeyCode.M))
         {
-            print(GiveDirection());
+           
             print(isObstacleFront());
             print(direction);
         }
@@ -64,16 +67,18 @@ public class Spaceship_Controllor : MonoBehaviour
         {
 
         }
-        if (manager.CheckAnswer() == "left" )
+        if (manager.CheckAnswer() == "left" || Input.GetKeyDown(KeyCode.Q))
         {
             this.transform.Rotate(0,0,90);
+            direction += new Vector2(-1, 0);
             audio_manager.playSpaceshipTurn();
             manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
         }
-        if (manager.CheckAnswer() == "right" )
+        if (manager.CheckAnswer() == "right" || Input.GetKeyDown(KeyCode.E))
         {
             this.transform.Rotate(0, 0, -90);
+            direction += new Vector2(1, 0);
             audio_manager.playSpaceshipTurn();
             manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
@@ -94,38 +99,53 @@ public class Spaceship_Controllor : MonoBehaviour
 
     void DirectionDetect()
     {
-        if (this.transform.eulerAngles.z == 90)
-        {
-            facing_direction = "left";
-            direction = Vector2.left;
-        }
-        if (this.transform.eulerAngles.z == 270 || this.transform.eulerAngles.z == -90)
+        if (direction == new Vector2 (1,1) || direction == new Vector2(-1, -1))
         {
             facing_direction = "right";
-            direction = Vector2.right;
+           
         }
-        if (this.transform.eulerAngles.z == 0)
+        else if (direction == new Vector2 (-1,1) || direction == new Vector2 (1,-1))
+        {
+            facing_direction = "left";
+            
+        }
+        else if (direction == new Vector2 (0,1))
         {
             facing_direction = "up";
-            direction = Vector2.up;
+            
         }
-        if (this.transform.eulerAngles.z == 180 || this.transform.eulerAngles.z == -180)
+        else if (direction == new Vector2 (0,-1))
         {
             facing_direction = "down";
-            direction = Vector2.down;
+            
         }
 
     }
     void RotationFix()
     {
-        if (this.transform.rotation.z >= 270)
+        if (direction.y == 1)
         {
-            this.transform.Rotate(0, 0, -360);
+            if (direction.x == -2 )
+            {
+                direction += new Vector2(2, -2);
+            }
+            if (direction.x == 2)
+            {
+                direction += new Vector2(-2, -2);
+            }
         }
-        if (this.transform.rotation.z <= -270)
+        else if (direction.y == -1)
         {
-            this.transform.Rotate(0, 0, 360);
+            if (direction.x == -2)
+            {
+                direction += new Vector2(2, 2);
+            }
+            if (direction.x == 2)
+            {
+                direction += new Vector2(-2, 2);
+            }
         }
+       
     }
 
     public string GiveDirection()
