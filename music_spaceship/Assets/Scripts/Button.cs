@@ -7,6 +7,7 @@ public class Button : MonoBehaviour
 {
     public instrument_Randomer manager;
     public int buttonOrder;
+    public Audio_Manager audio_manager;
 
     public FMODUnity.EventReference frenchHornSound;
     FMOD.Studio.EventInstance frenchHornInstance;
@@ -60,6 +61,8 @@ public class Button : MonoBehaviour
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
+
+        audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
         // frenchHornLowFMOD();
         frenchHornInstance = initiateInstance(frenchHornSound, frenchHornInstance, frenchHornInstanceID,"french_horn");
         frenchHornInstanceID = initiateInstanceID(frenchHornSound, frenchHornInstance, frenchHornInstanceID, "french_horn");
@@ -123,7 +126,6 @@ public class Button : MonoBehaviour
 
     public void OnButtonClicked()
     {
-
         manager.detectIfInputListIsFull();
 
         if (this.gameObject.layer == 6)
@@ -338,6 +340,7 @@ public class Button : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
+            audio_manager.playButtonSound();
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 

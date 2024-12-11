@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFB, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Affinity: 0x4000000000000001, Priority: 0xFFFF7FFA, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000029A8436BCE8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 00000114211B8618 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Affinity: 0x4000000000000003, Priority: 0xFFFF7FFD, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -19,989 +19,165 @@
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
 [LOG] PlaybackSystem::acquireMasterBus         : Setting master channel group format to 6
 [LOG] Manager::readBank                        : fileversion = 142, compatVersion = 140 (oldest = 44, newest = 142)
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 227840
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000C85BFEE48
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD66D35B90
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD66D35B50
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD66D35C70
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD66D35D30
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000011468584838
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='button', format=5, channels=2, frequency=48000, lengthbytes=2880, lengthpcm=106779, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975112.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 5376
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 1536
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000C85BFEE48
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD66D35B90
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD66D35B50
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD66D35C70
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD66D35D30
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000114170DBA18
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='new_drum', format=5, channels=2, frequency=48000, lengthbytes=5248, lengthpcm=155077, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.992035.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 227840
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 7680
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 0000000C85BFEE48
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFD66D35B90
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFD66D35B50
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFD66D35C70
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFD66D35D30
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 0000011468584838
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='error', format=5, channels=2, frequency=48000, lengthbytes=6496, lengthpcm=105923, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975008.
+[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/UI.bank : mode 02010082
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029A1C68A318, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029A1C68A318
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] AsyncThread::add                         : add sound to async queue : soundi = 00000114421A73F8, queue head = 0000011420CFCE68, queue count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000114421A73F8
+[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/UI.bank', mode=0x02010082
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029A1C689238, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 227840
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 7680
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A7722B0
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029A1C68A678, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029A8427DC28, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029A8427E498, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029A1C68A318
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029A1C689238
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A7723F0
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000001133737AA90
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029A1C689238
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029A1C68A678
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A772530
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029A1C68A678
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029A8427DC28
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A771EF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029A8427DC28
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029A8427E498
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A772170
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029A8427E498
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 000002997CDB6D58, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000002997CDB6D58
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029A1B9E63E8, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0767D98, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DE10
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC07682A8, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC07671C8, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000002997CDB6D58
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029A1B9E63E8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E310
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029A1B9E63E8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767D98
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E090
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767D98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC07682A8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E950
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC07682A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC07671C8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E450
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC07671C8
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0766CB8, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0766CB8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0765008, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0764948, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E590
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0764CA8, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0763BC8, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0766CB8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765008
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E6D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765008
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0764948
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E1D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0764948
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0764CA8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E810
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0764CA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0763BC8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DB90
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0763BC8
-[LOG] SoundI::release                          : guzheng_shang (0000029A8427E498)
-[LOG] SoundI::release                          :     guzheng_shang (00000299AC914058)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A1BC7E0D8)
-[LOG] SoundI::release                          : guzheng_jue (0000029A1C68A678)
-[LOG] SoundI::release                          :     guzheng_jue (00000299AC914538)
-[LOG] SoundI::release                          :     guzheng_jue (000002980EE16AF8)
-[LOG] SoundI::release                          : guzheng_yu (0000029A1C689238)
-[LOG] SoundI::release                          :     guzheng_yu (00000299AC914A18)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A8427EEB8)
-[LOG] SoundI::release                          : guzheng_zhi (0000029A1C68A318)
-[LOG] SoundI::release                          :     guzheng_zhi (00000299AC9146D8)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A8427E9A8)
-[LOG] SoundI::release                          : guzheng_gong (0000029A8427DC28)
-[LOG] SoundI::release                          :     guzheng_gong (00000299AC914BB8)
-[LOG] SoundI::release                          :     guzheng_gong (000002980EE156B8)
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0767F48, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767F48
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0767018, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0767888, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DCD0
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0767528, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0765F38, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767F48
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767018
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DF50
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767018
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767888
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A7723F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767888
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767528
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A772530
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767528
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765F38
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A772170
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765F38
-[LOG] SoundI::release                          : guzheng_shang (0000029AC07671C8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A1C2EBDE8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0765BD8)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC07682A8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029A1C2EBAA8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0768968)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0767D98)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A1C2EB908)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC07660E8)
-[LOG] SoundI::release                          : guzheng_yu (0000029A1B9E63E8)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A1C2EB428)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC07640D8)
-[LOG] SoundI::release                          : guzheng_zhi (000002997CDB6D58)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A1C2EB0E8)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC0768458)
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0762AE8, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0762AE8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0766958, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0766B08, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0765878, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A7722B0
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC07636B8, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0762AE8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0766958
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A771EF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0766958
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0766B08
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E950
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0766B08
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765878
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DE10
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765878
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC07636B8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E450
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC07636B8
-[LOG] SoundI::release                          : guzheng_shang (0000029AC0763BC8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AB917CA38)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0764288)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC0764CA8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AB917BD38)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0762788)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0764948)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A1A6B57C8)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC07620C8)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0766CB8)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A1A6B5148)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC07645E8)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0765008)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A1A6B5488)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC0768608)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC0767528)
-[LOG] SoundI::release                          :     guzheng_gong (0000029A1C2EB288)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC07680F8)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0767888)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A1C2EAA68)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC0762C98)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0767018)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A1C2EA3E8)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC0764798)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0767F48)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A1C2EAF48)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC0764438)
-[LOG] SoundI::release                          : guzheng_shang (0000029AC0765F38)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A8FC7D9D8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0762278)
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0762428, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0762428
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0762C98, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DF50
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0762788, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC07667A8, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0767378, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0762428
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0762C98
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E1D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0762C98
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0762788
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E590
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0762788
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC07667A8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E6D0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC07667A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767378
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E090
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767378
-[LOG] SoundI::release                          : guzheng_shang (0000029AC07636B8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A1C2EBC48)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC07682A8)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC0765878)
-[LOG] SoundI::release                          :     guzheng_gong (0000029A1C2EB908)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0767A38)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0766958)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A1C2EADA8)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC07625D8)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0762AE8)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A1C2EBDE8)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC0762E48)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0766B08)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A1C2EA8C8)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC07665F8)
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0764948, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0764948
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0764438, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0763D78, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E310
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC07631A8, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0765A28, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0764948
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0764438
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E450
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0764438
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0763D78
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E810
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0763D78
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC07631A8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4E950
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC07631A8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765A28
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DB90
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765A28
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0764AF8, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0764AF8
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0764CA8, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0768B18, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DCD0
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0763358, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC07620C8, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0764AF8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0764CA8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029780F4DE10
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0764CA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0768B18
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A772530
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0768B18
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0763358
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A7723F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0763358
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC07620C8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A771EF0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC07620C8
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0763508, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0763508
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0767BE8, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0765BD8, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A772170
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0765368, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0762AE8, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0763508
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0767BE8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A1A7722B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0767BE8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765BD8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA6E30
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765BD8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765368
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA6430
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765368
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0762AE8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA6BB0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0762AE8
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         : add sound to async queue : soundi = 0000029AC0765878, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSound                     : filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0765878
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0766448, queue head = 0000029A1A0EF708, queue count = 0
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0769388, queue head = 0000029A1A0EF708, queue count = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA6570
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0769DA8, queue head = 0000029A1A0EF708, queue count = 2
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSound                     :     filename = FMOD/audio/Build/Desktop/Guzheng.bank : mode 02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] AsyncThread::add                         :     add sound to async queue : soundi = 0000029AC0769538, queue head = 0000029A1A0EF708, queue count = 3
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_zhi', format=5, channels=2, frequency=48000, lengthbytes=71200, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975057.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0765878
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0766448
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA6F70
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_yu', format=5, channels=2, frequency=48000, lengthbytes=61760, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968800.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0766448
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0769388
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA71F0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_jue', format=5, channels=2, frequency=48000, lengthbytes=47264, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975026.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0769388
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0769DA8
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA70B0
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_gong', format=5, channels=2, frequency=48000, lengthbytes=91840, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975030.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0769DA8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000029AC0769538
-[LOG] SystemI::createSoundInternal             :     Create name='FMOD/audio/Build/Desktop/Guzheng.bank', mode=0x02010082
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 224
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 602112
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 8704
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000029A83EA6930
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='guzheng_shang', format=5, channels=2, frequency=48000, lengthbytes=92192, lengthpcm=493615, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.968516.
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000029AC0769538
-[LOG] SoundI::release                          : guzheng_shang (0000029AC0767378)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A8FC7D9D8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0766CB8)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0762788)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A1C2EA588)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC0764288)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0762C98)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A1C2EA3E8)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC0763BC8)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0762428)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A1C2EA248)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC07660E8)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC07667A8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029A1C2EAC08)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0764798)
-[LOG] SoundI::release                          : guzheng_shang (0000029AC0765A28)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A1C2EADA8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC07671C8)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC07631A8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029A1C2EA0A8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0768968)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0763D78)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A1C2EA8C8)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC07687B8)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0764438)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A1C2EBAA8)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC07645E8)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0764948)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A1C2EA728)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC0768608)
-[LOG] SoundI::release                          : guzheng_shang (0000029AC07620C8)
-[LOG] SoundI::release                          :     guzheng_shang (00000299B25DD5F8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0767A38)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC0763358)
-[LOG] SoundI::release                          :     guzheng_gong (00000299B25DC0D8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0767888)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0768B18)
-[LOG] SoundI::release                          :     guzheng_jue (00000299B25DC8F8)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC0765008)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0764AF8)
-[LOG] SoundI::release                          :     guzheng_zhi (00000299B25DBBF8)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC0764E58)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0764CA8)
-[LOG] SoundI::release                          :     guzheng_yu (00000299B25DCA98)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC0768458)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC0765368)
-[LOG] SoundI::release                          :     guzheng_gong (00000299B25DC418)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0767F48)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0765BD8)
-[LOG] SoundI::release                          :     guzheng_jue (00000299B25DBF38)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC0767D98)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0767BE8)
-[LOG] SoundI::release                          :     guzheng_yu (00000299B25DD458)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC07656C8)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0763508)
-[LOG] SoundI::release                          :     guzheng_zhi (00000299B25DD118)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC0762278)
-[LOG] SoundI::release                          : guzheng_shang (0000029AC0762AE8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A90710668)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0763868)
-[LOG] SoundI::release                          : guzheng_shang (0000029AC0769538)
-[LOG] SoundI::release                          :     guzheng_shang (0000029A907111C8)
-[LOG] SoundI::release                          :     guzheng_shang (0000029AC0769BF8)
-[LOG] SoundI::release                          : guzheng_gong (0000029AC0769DA8)
-[LOG] SoundI::release                          :     guzheng_gong (0000029A9070F968)
-[LOG] SoundI::release                          :     guzheng_gong (0000029AC0769A48)
-[LOG] SoundI::release                          : guzheng_yu (0000029AC0766448)
-[LOG] SoundI::release                          :     guzheng_yu (0000029A90710CE8)
-[LOG] SoundI::release                          :     guzheng_yu (0000029AC0769898)
-[LOG] SoundI::release                          : guzheng_zhi (0000029AC0765878)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029A90710328)
-[LOG] SoundI::release                          :     guzheng_zhi (0000029AC07696E8)
-[LOG] SoundI::release                          : guzheng_jue (0000029AC0769388)
-[LOG] SoundI::release                          :     guzheng_jue (0000029A9070F7C8)
-[LOG] SoundI::release                          :     guzheng_jue (0000029AC0768E78)
-[LOG] SoundI::release                          :  (00000299AC0FC6E8)
-[LOG] SoundI::release                          :     french_horn_zhi (0000029A1BC6F708)
-[LOG] SoundI::release                          :  (00000299AC0FF7C8)
-[LOG] SoundI::release                          :     french_horn_jue (0000029A1BC6F8A8)
-[LOG] SoundI::release                          :  (00000299AC0FEC48)
-[LOG] SoundI::release                          :     french_horn_shang (0000029A1BC6F088)
-[LOG] SoundI::release                          :  (00000299AC0FC408)
-[LOG] SoundI::release                          :     french_horn_yu (000002997CAEB6E8)
-[LOG] SoundI::release                          :  (00000299AC0FE518)
-[LOG] SoundI::release                          :     french_horn_gong (0000029A1BC6F568)
-[LOG] SoundI::release                          :  (0000029A1BC19918)
-[LOG] SoundI::release                          :     bass_yu (0000029A901BB688)
-[LOG] SoundI::release                          :  (0000029A1BC1B5D8)
-[LOG] SoundI::release                          :     bass_jue (0000029A901BB9C8)
-[LOG] SoundI::release                          :  (0000029A1BC197A8)
-[LOG] SoundI::release                          :     bass_shang (0000029A901BB828)
-[LOG] SoundI::release                          :  (0000029A1BC1C2C8)
-[LOG] SoundI::release                          :     bass_zhi (0000029A8FC7D018)
-[LOG] SoundI::release                          :  (0000029A1BC19BF8)
-[LOG] SoundI::release                          :     bass_gong (0000029A901BB348)
-[LOG] SoundI::release                          :  (0000029A1BC19078)
-[LOG] SoundI::release                          :     violin_zhi (0000029A1C221708)
-[LOG] SoundI::release                          :  (0000029A1BC19638)
-[LOG] SoundI::release                          :     violin_jue (0000029A1C221D88)
-[LOG] SoundI::release                          :  (0000029A1BC1A8E8)
-[LOG] SoundI::release                          :     violin_yu (00000299A2C9B728)
-[LOG] SoundI::release                          :  (0000029A1BC1BFE8)
-[LOG] SoundI::release                          :     violin_shang (00000299A2C9B3E8)
-[LOG] SoundI::release                          :  (0000029A1BC19ED8)
-[LOG] SoundI::release                          :     violin_gong (00000299B19642F8)
-[LOG] SoundI::release                          :  (00000299AC0FFD88)
-[LOG] SoundI::release                          :     french_horn_yu2 (00000299A2544A78)
-[LOG] SoundI::release                          :  (00000299AC0FCB38)
-[LOG] SoundI::release                          :     french_horn_shang2 (0000029A1BC6F228)
-[LOG] SoundI::release                          :  (00000299AC0FF4E8)
-[LOG] SoundI::release                          :     french_horn_jue2 (000002997CAEAB88)
-[LOG] SoundI::release                          :  (00000299AC0FE688)
-[LOG] SoundI::release                          :     french_horn_gong2 (0000029A08DF09B8)
-[LOG] SoundI::release                          :  (00000299AC0FBFB8)
-[LOG] SoundI::release                          :     french_horn_zhi2 (000002997CAEAD28)
-[LOG] SoundI::release                          :  (0000029A1BC19A88)
-[LOG] SoundI::release                          :     bass_zhi2 (0000029A8FC7D358)
-[LOG] SoundI::release                          :  (0000029A1BC1A778)
-[LOG] SoundI::release                          :     bass_jue2 (0000029A8FC7D4F8)
-[LOG] SoundI::release                          :  (0000029A1BC1A498)
-[LOG] SoundI::release                          :     bass_shang2 (0000029A8FC7D698)
-[LOG] SoundI::release                          :  (0000029A1BC1A328)
-[LOG] SoundI::release                          :     bass_yu2 (0000029A901BB4E8)
-[LOG] SoundI::release                          :  (0000029A1BC1ABC8)
-[LOG] SoundI::release                          :     bass_gong2 (0000029A1C221228)
-[LOG] SoundI::release                          :  (00000299AC0FD0F8)
-[LOG] SoundI::release                          :     flute_zhi (0000029A83E890F8)
-[LOG] SoundI::release                          : bgm (0000029A8427D058)
-[LOG] SoundI::release                          :     bgm (0000029A83A6C0B8)
-[LOG] SoundI::release                          :     bgm (0000029A8427D718)
-[LOG] SoundI::release                          :  (0000029A1BC18948)
-[LOG] SoundI::release                          :     flute_gong (00000299B1964978)
-[LOG] SoundI::release                          :  (00000299AC0FD828)
-[LOG] SoundI::release                          :     flute_yu (0000029A83E89298)
-[LOG] SoundI::release                          :  (0000029A1BC19D68)
-[LOG] SoundI::release                          :     flute_shang (00000299B1964638)
-[LOG] SoundI::release                          :  (00000299AC0FCCA8)
-[LOG] SoundI::release                          :     flute_jue (00000299A2544598)
-[LOG] SoundI::release                          :  (00000299AC0FD998)
-[LOG] SoundI::release                          :     flute_zhi2 (0000029A83E888D8)
-[LOG] SoundI::release                          :  (00000299AC0FC858)
-[LOG] SoundI::release                          :     flute_shang2 (00000299A2544258)
-[LOG] SoundI::release                          :  (00000299AC0FC128)
-[LOG] SoundI::release                          :     flute_gong2 (00000299A25443F8)
-[LOG] SoundI::release                          :  (00000299AC0FDB08)
-[LOG] SoundI::release                          :     flute_yu2 (0000029A83E88C18)
-[LOG] SoundI::release                          :  (0000029A1BC1B468)
-[LOG] SoundI::release                          :     flute_jue2 (0000029A83E88F58)
-[LOG] SoundI::release                          :  (0000029A1BC1C5A8)
-[LOG] SoundI::release                          :     violin_zhi2 (00000299B1964158)
-[LOG] SoundI::release                          :  (0000029A1BC1BE78)
-[LOG] SoundI::release                          :     violin_jue2 (00000299A2C9BDA8)
-[LOG] SoundI::release                          :  (0000029A1BC191E8)
-[LOG] SoundI::release                          :     violin_gong2 (00000299A2C9BC08)
-[LOG] SoundI::release                          :  (0000029A1BC1AA58)
-[LOG] SoundI::release                          :     violin_yu2 (0000029A1C221A48)
-[LOG] SoundI::release                          :  (0000029A1BC1C158)
-[LOG] SoundI::release                          :     violin_shang2 (00000299A2C9BA68)
+[LOG] SystemI::createSoundInternal             :     Stream 0/1: name='bgm', format=5, channels=2, frequency=48000, lengthbytes=183904, lengthpcm=838154, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.975045.
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000114421A73F8
+[LOG] SoundI::release                          :  (0000011426B5D978)
+[LOG] SoundI::release                          :     shuffle_2 (0000011444E56E58)
+[LOG] SoundI::release                          :  (0000011426B5DF38)
+[LOG] SoundI::release                          :     correct (00000114685FFD68)
+[LOG] SoundI::release                          :  (00000113A14784F8)
+[LOG] SoundI::release                          :     new_drum (0000011335FE6AC8)
+[LOG] SoundI::release                          :  (00000114656318B8)
+[LOG] SoundI::release                          :     button (0000011443384708)
+[LOG] SoundI::release                          :  (0000011465631468)
+[LOG] SoundI::release                          :     error (0000011443382D08)
+[LOG] SoundI::release                          :  (00000113ACBC6148)
+[LOG] SoundI::release                          :     french_horn_zhi (0000011434811D68)
+[LOG] SoundI::release                          :  (00000113ACBC7C98)
+[LOG] SoundI::release                          :     french_horn_jue (00000114348147A8)
+[LOG] SoundI::release                          :  (00000113ACBC7118)
+[LOG] SoundI::release                          :     french_horn_shang (0000011434813288)
+[LOG] SoundI::release                          :  (00000113ACBC6FA8)
+[LOG] SoundI::release                          :     french_horn_yu (0000011177D085D8)
+[LOG] SoundI::release                          :  (00000113ACBC7B28)
+[LOG] SoundI::release                          :     french_horn_gong (0000011434814468)
+[LOG] SoundI::release                          :  (000001133C1DC418)
+[LOG] SoundI::release                          :     bass_yu (0000011468602128)
+[LOG] SoundI::release                          :  (000001133C1DC6F8)
+[LOG] SoundI::release                          :     bass_jue (0000011468601DE8)
+[LOG] SoundI::release                          :  (000001133C1DC2A8)
+[LOG] SoundI::release                          :     bass_shang (0000011468603308)
+[LOG] SoundI::release                          :  (0000011426B5DC58)
+[LOG] SoundI::release                          :     bass_zhi (0000011468600A68)
+[LOG] SoundI::release                          :  (0000011426B5D698)
+[LOG] SoundI::release                          :     bass_gong (0000011468601C48)
+[LOG] SoundI::release                          :  (000001133C1DC138)
+[LOG] SoundI::release                          :     violin_zhi (0000011468602468)
+[LOG] SoundI::release                          :  (000001133C1DC9D8)
+[LOG] SoundI::release                          :     violin_jue (0000011468602AE8)
+[LOG] SoundI::release                          :  (000001133C1DCCB8)
+[LOG] SoundI::release                          :     violin_yu (0000011468601768)
+[LOG] SoundI::release                          :  (000001132AFC63D8)
+[LOG] SoundI::release                          :     violin_shang (0000011468600248)
+[LOG] SoundI::release                          :  (000001132AFC6C78)
+[LOG] SoundI::release                          :     violin_gong (00000114686022C8)
+[LOG] SoundI::release                          :  (00000113ACBC6B58)
+[LOG] SoundI::release                          :     french_horn_yu2 (0000011434813768)
+[LOG] SoundI::release                          :  (00000113ACBC69E8)
+[LOG] SoundI::release                          :     french_horn_shang2 (00000114348116E8)
+[LOG] SoundI::release                          :  (00000113ACBC7568)
+[LOG] SoundI::release                          :     french_horn_jue2 (0000011177D09478)
+[LOG] SoundI::release                          :  (00000113ACBC6428)
+[LOG] SoundI::release                          :     french_horn_gong2 (00000114348123E8)
+[LOG] SoundI::release                          :  (00000113ACBC7848)
+[LOG] SoundI::release                          :     french_horn_zhi2 (0000011434814C88)
+[LOG] SoundI::release                          :  (0000011426B5D808)
+[LOG] SoundI::release                          :     bass_zhi2 (00000114686027A8)
+[LOG] SoundI::release                          :  (0000011426B5D528)
+[LOG] SoundI::release                          :     bass_jue2 (00000114685FF888)
+[LOG] SoundI::release                          :  (0000011426B5DDC8)
+[LOG] SoundI::release                          :     bass_shang2 (0000011468600F48)
+[LOG] SoundI::release                          :  (000001133C1DCB48)
+[LOG] SoundI::release                          :     bass_yu2 (0000011468602C88)
+[LOG] SoundI::release                          :  (000001133C1DC868)
+[LOG] SoundI::release                          :     bass_gong2 (0000011468602608)
+[LOG] SoundI::release                          :  (0000011433B67FD8)
+[LOG] SoundI::release                          :     flute_zhi (0000011434812F48)
+[LOG] SoundI::release                          : bgm (00000114421A73F8)
+[LOG] SoundI::release                          :     bgm (0000011428C5F7B8)
+[LOG] SoundI::release                          :     bgm (000001132D4C3C78)
+[LOG] SoundI::release                          : bgm (000001143C1D2F78)
+[LOG] SoundI::release                          :     bgm (0000011335FE5A88)
+[LOG] SoundI::release                          :     bgm (00000114445D1438)
+[LOG] SoundI::release                          :  (000001132AFC6998)
+[LOG] SoundI::release                          :     flute_gong (0000011434812588)
+[LOG] SoundI::release                          :  (00000113ACBC6598)
+[LOG] SoundI::release                          :     flute_yu (0000011434814948)
+[LOG] SoundI::release                          :  (000001132AFC66B8)
+[LOG] SoundI::release                          :     flute_shang (0000011434812DA8)
+[LOG] SoundI::release                          :  (00000113ACBC62B8)
+[LOG] SoundI::release                          :     flute_jue (0000011434812A68)
+[LOG] SoundI::release                          :  (000001132AFC6268)
+[LOG] SoundI::release                          :     flute_zhi2 (00000114348120A8)
+[LOG] SoundI::release                          :  (00000113ACBC6CC8)
+[LOG] SoundI::release                          :     flute_shang2 (0000011434811BC8)
+[LOG] SoundI::release                          :  (00000113ACBC5FD8)
+[LOG] SoundI::release                          :     flute_gong2 (0000011434813908)
+[LOG] SoundI::release                          :  (000001132AFC6828)
+[LOG] SoundI::release                          :     flute_yu2 (0000011434811548)
+[LOG] SoundI::release                          :  (000001132AFC6548)
+[LOG] SoundI::release                          :     flute_jue2 (0000011434811F08)
+[LOG] SoundI::release                          :  (000001132AFC6B08)
+[LOG] SoundI::release                          :     violin_zhi2 (0000011434814128)
+[LOG] SoundI::release                          :  (000001132AFC60F8)
+[LOG] SoundI::release                          :     violin_jue2 (0000011468601428)
+[LOG] SoundI::release                          :  (000001132AFC6DE8)
+[LOG] SoundI::release                          :     violin_gong2 (0000011468603168)
+[LOG] SoundI::release                          :  (000001133C1DC588)
+[LOG] SoundI::release                          :     violin_yu2 (00000114685FF548)
+[LOG] SoundI::release                          :  (000001133C1DCE28)
+[LOG] SoundI::release                          :     violin_shang2 (0000011468601AA8)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
@@ -1012,4 +188,12 @@
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
 [LOG] SystemI::close                           : Closed.
-[ERR] assert                                   : assertion: 'gSystemInitCount == 0' failed
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] SystemI::close                           : Closed.
+[LOG] Thread::callback                         : FMOD nonblocking thread (0) finished.
+[LOG] Thread::callback                         : FMOD file thread finished.

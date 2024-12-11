@@ -5,9 +5,13 @@ using UnityEngine;
 public class Iniput_button : MonoBehaviour
 {
     public instrument_Randomer manager;
+    public Audio_Manager audio_manager;
+
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
+        audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
+
     }
 
     // Update is called once per frame
@@ -22,6 +26,8 @@ public class Iniput_button : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            audio_manager.playButtonSound();
+
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 

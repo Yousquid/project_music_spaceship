@@ -7,10 +7,13 @@ public class MapController : MonoBehaviour
     private instrument_Randomer manager;
     private Spaceship_Controllor spaceship;
     private string facing_direction;
+    public Audio_Manager audio_manager;
     void Start()
     {
         spaceship = FindNearestWithTag("spaceship").GetComponent<Spaceship_Controllor>();
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
+        audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
+
 
     }
 
@@ -47,6 +50,8 @@ public class MapController : MonoBehaviour
     {
         if (manager.CheckAnswer() == "forward" && !spaceship.isObstacleFront())
         {
+
+
             if (spaceship.GiveDirection() == "up")
             {
                 this.transform.position += new Vector3(0, -1, 0);
@@ -70,9 +75,13 @@ public class MapController : MonoBehaviour
             }
             manager.ResetAudioSource();
 
+            audio_manager.playSpaceshipForward();
+
+
         }
         else if (manager.CheckAnswer() == "forward" && spaceship.isObstacleFront())
         {
+            audio_manager.playWrongSFX();
             manager.SetCheckingAnswerFalse();
         }
     }

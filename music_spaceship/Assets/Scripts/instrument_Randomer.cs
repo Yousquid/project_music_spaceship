@@ -14,6 +14,7 @@ public class instrument_Randomer : MonoBehaviour
     public bool isRecordPlayerInput = false;
     public List<string> playerInputList;
     public bool isCheckingAnswer;
+    public Audio_Manager audio_manager;
 
     //For Indicator
     public GameObject indicator;
@@ -24,7 +25,8 @@ public class instrument_Randomer : MonoBehaviour
     public FMODUnity.EventReference bgm;
     // Start is called before the first frame update
     void Start()
-    {    
+    {
+        audio_manager = GetComponent<Audio_Manager>();
         initiateInstrumentList();
      //   initiateButtons();
         initiatePitchList();
@@ -59,6 +61,7 @@ public class instrument_Randomer : MonoBehaviour
 
     public void ResetAudioSource()
     {
+        audio_manager.playCorrectSFX();
         Shuffle(buttonAudioSourceList);
         Shuffle(instrumentsSourceList);
     }

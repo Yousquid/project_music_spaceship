@@ -11,9 +11,11 @@ public class Spaceship_Controllor : MonoBehaviour
     public float distanceCheck = 1.5f;
     public LayerMask layerMask;
     private Vector2 direction;
+    public Audio_Manager audio_manager;
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
+        audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
         facing_direction = "up";
         zAngle = this.transform.eulerAngles.z;
         direction = Vector2.up;
@@ -65,23 +67,27 @@ public class Spaceship_Controllor : MonoBehaviour
         if (manager.CheckAnswer() == "left" )
         {
             this.transform.Rotate(0,0,90);
+            audio_manager.playSpaceshipTurn();
             manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
         }
         if (manager.CheckAnswer() == "right" )
         {
             this.transform.Rotate(0, 0, -90);
+            audio_manager.playSpaceshipTurn();
             manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
         }
-        if (manager.CheckAnswer() == "shoot")
+        if (manager.CheckAnswer() == "shoot" || Input.GetKeyDown(KeyCode.I))
         {
             Instantiate(bullet);
+            audio_manager.playSpaceshipShoot();
             manager.SetCheckingAnswerFalse();
             manager.ResetAudioSource();
         }
         if (manager.CheckAnswer() == "error" && manager.detectIfInputListIsFull())
         {
+            audio_manager.playWrongSFX();
             manager.SetCheckingAnswerFalse();
         }
     }

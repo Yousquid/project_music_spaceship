@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a26d115c1ad614ab99bf69d7c94f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio_manager: {fileID: 130884025}
 --- !u!50 &97572903
 Rigidbody2D:
   serializedVersion: 4
@@ -538,6 +539,7 @@ GameObject:
   m_Component:
   - component: {fileID: 130884024}
   - component: {fileID: 130884023}
+  - component: {fileID: 130884025}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: manager
@@ -566,6 +568,7 @@ MonoBehaviour:
   isRecordPlayerInput: 0
   playerInputList: []
   isCheckingAnswer: 0
+  audio_manager: {fileID: 0}
   indicator: {fileID: 4269463178111275548, guid: f5f71c96a9610c043adf2099db1354d0, type: 3}
   reference: {fileID: 1562228579}
   indicatorInterval: 1.5
@@ -594,6 +597,88 @@ Transform:
   - {fileID: 389959807}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &130884025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130884022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7837cf99092ca4419c8a4e110cea507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wrongSound:
+    Guid:
+      Data1: -1876169424
+      Data2: 1325828444
+      Data3: 1977379716
+      Data4: 872727267
+    Path: event:/UI_wrong
+  correctSound:
+    Guid:
+      Data1: 2020523472
+      Data2: 1265396639
+      Data3: 1234113975
+      Data4: 861460136
+    Path: event:/UI_corrct&shuffle
+  spaceshipForwardSound:
+    Guid:
+      Data1: -82813191
+      Data2: 1144017181
+      Data3: -353186126
+      Data4: -1768840490
+    Path: event:/spaceship_forward
+  spaceshipTurnSound:
+    Guid:
+      Data1: -456064401
+      Data2: 1107155580
+      Data3: -261401447
+      Data4: -229289316
+    Path: event:/spaceship_turn
+  spaceshipShootSound:
+    Guid:
+      Data1: 1318065191
+      Data2: 1304255471
+      Data3: -128308846
+      Data4: 1059441528
+    Path: event:/spaceship_shoot
+  stickOnSound:
+    Guid:
+      Data1: 2113747060
+      Data2: 1132644848
+      Data3: -710539353
+      Data4: -979762151
+    Path: event:/stick_on
+  stickOffSound:
+    Guid:
+      Data1: -1931410963
+      Data2: 1268970180
+      Data3: -487960392
+      Data4: -310339886
+    Path: event:/stick_off
+  guideBookSound:
+    Guid:
+      Data1: 1277436449
+      Data2: 1163997095
+      Data3: 2000688060
+      Data4: 2012921213
+    Path: event:/UI_guidebook_flip
+  asteroidDestroySound:
+    Guid:
+      Data1: 2048658509
+      Data2: 1296066756
+      Data3: 2048478887
+      Data4: 720353101
+    Path: event:/asteroid_destroyed
+  buttonSound:
+    Guid:
+      Data1: -1173343741
+      Data2: 1285514592
+      Data3: 1244863898
+      Data4: -701192049
+    Path: event:/UI_button_pressed
 --- !u!1001 &172212464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -905,6 +990,63 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 130884023}
+--- !u!1001 &251949601
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1364507833}
+    m_Modifications:
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.29089108
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6832441205728808034, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+      propertyPath: m_Name
+      value: asteroid (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
 --- !u!1001 &309151951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1234,6 +1376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 0}
+  audio_manager: {fileID: 0}
 --- !u!212 &519562548
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1586,6 +1729,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &605392906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5782317510466443763, guid: 12267bb12b3a69047b8402dc2b12f398, type: 3}
+  m_PrefabInstance: {fileID: 251949601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2236,6 +2384,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a26d115c1ad614ab99bf69d7c94f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio_manager: {fileID: 130884025}
 --- !u!50 &952167154
 Rigidbody2D:
   serializedVersion: 4
@@ -2456,6 +2605,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a26d115c1ad614ab99bf69d7c94f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio_manager: {fileID: 130884025}
 --- !u!50 &1000194080
 Rigidbody2D:
   serializedVersion: 4
@@ -2676,6 +2826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a26d115c1ad614ab99bf69d7c94f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio_manager: {fileID: 130884025}
 --- !u!50 &1038490845
 Rigidbody2D:
   serializedVersion: 4
@@ -3068,7 +3219,7 @@ Transform:
   m_GameObject: {fileID: 1246748814}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000001808731, y: 0.00000004846477, z: 0.0000005066395, w: 1}
-  m_LocalPosition: {x: -4.485, y: -1.726, z: 0}
+  m_LocalPosition: {x: -4.501, y: -2.486, z: 0}
   m_LocalScale: {x: 0.8423887, y: 0.8167801, z: 0.8423887}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3092,6 +3243,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 2048
+  audio_manager: {fileID: 0}
 --- !u!60 &1246748820
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3127,7 +3279,7 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.49881938, y: 0.35107097}
     oldSize: {x: 4.5, y: 6.35}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
@@ -3136,28 +3288,28 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.42999998, y: -1.255}
-      - {x: 0.42999998, y: -0.965}
-      - {x: 0.42, y: -0.945}
-      - {x: 0.26999998, y: -0.98499995}
-      - {x: 0.26, y: -0.745}
-      - {x: 0.21, y: -0.625}
-      - {x: 0.04, y: -0.405}
-      - {x: -0.049999997, y: -0.405}
-      - {x: -0.16, y: -0.525}
-      - {x: -0.25, y: -0.655}
-      - {x: -0.35999998, y: -0.945}
-      - {x: -0.45, y: -0.98499995}
-      - {x: -0.45, y: -1.2049999}
-      - {x: -0.39999998, y: -1.275}
-      - {x: -0.35999998, y: -1.275}
-      - {x: -0.31, y: -1.1949999}
-      - {x: -0.19, y: -1.365}
-      - {x: -0.049999997, y: -1.5649999}
-      - {x: 0.01, y: -1.5649999}
-      - {x: 0.13, y: -1.4549999}
-      - {x: 0.26, y: -1.235}
-      - {x: 0.38, y: -1.285}
+    - - {x: 0.4353128, y: -0.3093007}
+      - {x: 0.4353128, y: -0.01930069}
+      - {x: 0.4253128, y: 0.0006993103}
+      - {x: 0.2753128, y: -0.039300688}
+      - {x: 0.2653128, y: 0.2006993}
+      - {x: 0.2153128, y: 0.3206993}
+      - {x: 0.045312803, y: 0.5406993}
+      - {x: -0.044687193, y: 0.5406993}
+      - {x: -0.1546872, y: 0.4206993}
+      - {x: -0.24468718, y: 0.2906993}
+      - {x: -0.35468718, y: 0.0006993103}
+      - {x: -0.4446872, y: -0.039300688}
+      - {x: -0.4446872, y: -0.25930068}
+      - {x: -0.39468718, y: -0.32930067}
+      - {x: -0.35468718, y: -0.32930067}
+      - {x: -0.3046872, y: -0.24930069}
+      - {x: -0.1846872, y: -0.41930068}
+      - {x: -0.044687193, y: -0.61930066}
+      - {x: 0.015312805, y: -0.61930066}
+      - {x: 0.1353128, y: -0.50930065}
+      - {x: 0.2653128, y: -0.28930068}
+      - {x: 0.3853128, y: -0.3393007}
   m_UseDelaunayMesh: 0
 --- !u!1 &1268189809
 GameObject:
@@ -3334,6 +3486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7355bfcec6f751c4d87ccd04fadad307, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio_manager: {fileID: 0}
 --- !u!4 &1364507833
 Transform:
   m_ObjectHideFlags: 0
@@ -3350,6 +3503,7 @@ Transform:
   - {fileID: 2095905050}
   - {fileID: 681344865}
   - {fileID: 1208443490}
+  - {fileID: 605392906}
   - {fileID: 654358451}
   - {fileID: 685727343}
   - {fileID: 537162483}
@@ -3563,7 +3717,7 @@ Transform:
   m_GameObject: {fileID: 1529301482}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 8.765974e-15, w: 1}
-  m_LocalPosition: {x: -0.0295, y: -1.1249, z: 0.61}
+  m_LocalPosition: {x: -0.04, y: -0.21, z: 0.61}
   m_LocalScale: {x: 38.27344, y: 40.84398, z: 0.7780773}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4120,6 +4274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a26d115c1ad614ab99bf69d7c94f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audio_manager: {fileID: 130884025}
 --- !u!50 &2106165654
 Rigidbody2D:
   serializedVersion: 4
