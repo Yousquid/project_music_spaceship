@@ -7,8 +7,11 @@ public class Iniput_button : MonoBehaviour
     public instrument_Randomer manager;
     public Audio_Manager audio_manager;
 
+    private Animator anim;
+
     void Start()
     {
+        anim = GetComponent<Animator>();
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
         audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
 
@@ -46,6 +49,7 @@ public class Iniput_button : MonoBehaviour
                 //    }
                 //}
 
+                anim.SetTrigger("Press");
                 manager.resetInputList();
 
             }
