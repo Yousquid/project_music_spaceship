@@ -8,6 +8,9 @@ public class Drag : MonoBehaviour
     Vector2 distance;
     Rigidbody2D rb;
     public Audio_Manager audio_manager;
+
+    private bool isDown = false;
+    private bool isDrag = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,13 +26,23 @@ public class Drag : MonoBehaviour
 
     private void OnMouseDown()
     {
-        audio_manager.playStickOffSound();
+        isDrag = true;
+        if (isDown)
+        {
+            audio_manager.playStickOffSound();
+            isDown = false;
+        }
         distance = new Vector2(transform.position.x, transform.position.y) - mousePos;
     }
 
     private void OnMouseDrag()
     {
-        audio_manager.playStickOnSound();
+        isDown = true;
+        if (isDrag)
+        {
+            audio_manager.playStickOnSound();
+            isDrag = false;
+        }
 
         transform.position = mousePos + distance;
     }
