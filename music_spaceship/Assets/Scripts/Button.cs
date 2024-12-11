@@ -340,12 +340,13 @@ public class Button : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
-            audio_manager.playButtonSound();
+            
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
+                audio_manager.playButtonSound();
                 OnButtonClicked();
             }
         }
