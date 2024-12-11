@@ -57,10 +57,14 @@ public class bullet : MonoBehaviour
         }
         if (spaceship.GiveDirection() == "left")
         {
+            this.transform.Rotate(0, 0, 90);
+            this.transform.position += new Vector3(0, -0.4f, 0);
             rigidbody.velocity += Vector2.left;
         }
         if (spaceship.GiveDirection() == "right")
         {
+            this.transform.Rotate(0, 0, -90);
+            this.transform.position += new Vector3(0, -0.4f, 0);
             rigidbody.velocity += Vector2.right;
         }
     }
