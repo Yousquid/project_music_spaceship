@@ -8,7 +8,8 @@ public class Spaceship_Controllor : MonoBehaviour
     private string facing_direction;
     float zAngle;
     public GameObject bullet;
-
+    public float distanceCheck = 1.5f;
+    public LayerMask layerMask;
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
@@ -116,5 +117,18 @@ public class Spaceship_Controllor : MonoBehaviour
     public string GiveDirection()
     {
         return facing_direction;
+    }
+
+    public bool isObstacleFront()
+    {
+        RaycastHit2D frontRay;
+
+        frontRay = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), distanceCheck,layerMask);
+
+        if (frontRay)
+        {
+            return true;
+        }
+        else return false;
     }
 }

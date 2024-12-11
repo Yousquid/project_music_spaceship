@@ -45,13 +45,13 @@ public class MapController : MonoBehaviour
 
     void MoveMap()
     {
-        if (manager.CheckAnswer() == "forward")
+        if (manager.CheckAnswer() == "forward" && !spaceship.isObstacleFront())
         {
             if (spaceship.GiveDirection() == "up")
             {
                 this.transform.position += new Vector3(0, -1, 0);
                 manager.SetCheckingAnswerFalse();
-                
+
             }
             if (spaceship.GiveDirection() == "left")
             {
@@ -70,6 +70,10 @@ public class MapController : MonoBehaviour
             }
             manager.ResetAudioSource();
 
+        }
+        else if (manager.CheckAnswer() == "forward" && spaceship.isObstacleFront())
+        {
+            manager.SetCheckingAnswerFalse();
         }
     }
 
