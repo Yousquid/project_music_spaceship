@@ -34,9 +34,9 @@ public class indicaotr_mask : MonoBehaviour
         {
             this.transform.position = new Vector3(transform.position.x, -2.8f, 0);
         }
-        if (manager.returnManageIndicators() == 5)
-        {
-            this.transform.position = new Vector3(transform.position.x, -2f, 0);
-        }
+        //if (manager.returnManageIndicators() == 5)
+        //{
+        //    this.transform.position = new Vector3(transform.position.x, -2f, 0);
+        //}
     }
 }

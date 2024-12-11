@@ -205,7 +205,7 @@ public class instrument_Randomer : MonoBehaviour
 
     public int returnManageIndicators()
     {
-        for (int i = 0; i <= 5; i++)
+        for (int i = 0; i < 5; i++)
         {
             if (playerInputList[i] != "0")
             {
