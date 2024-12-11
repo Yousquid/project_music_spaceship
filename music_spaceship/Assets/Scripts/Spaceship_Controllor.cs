@@ -10,6 +10,7 @@ public class Spaceship_Controllor : MonoBehaviour
     public GameObject bullet;
     public float distanceCheck = 1.5f;
     public LayerMask layerMask;
+    private Vector2 direction;
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
@@ -27,6 +28,8 @@ public class Spaceship_Controllor : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             print(GiveDirection());
+            print(isObstacleFront());
+            print(direction);
         }
     }
 
@@ -87,18 +90,22 @@ public class Spaceship_Controllor : MonoBehaviour
         if (this.transform.eulerAngles.z == 90)
         {
             facing_direction = "left";
+            direction = Vector2.left;
         }
         if (this.transform.eulerAngles.z == 270)
         {
             facing_direction = "right";
+            direction = Vector2.right;
         }
         if (this.transform.eulerAngles.z == 0)
         {
             facing_direction = "up";
+            direction = Vector2.up;
         }
         if (this.transform.eulerAngles.z == 180 || this.transform.eulerAngles.z == -180)
         {
             facing_direction = "down";
+            direction = Vector2.down;
         }
 
     }
@@ -123,7 +130,7 @@ public class Spaceship_Controllor : MonoBehaviour
     {
         RaycastHit2D frontRay;
 
-        frontRay = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.up), distanceCheck,layerMask);
+        frontRay = Physics2D.Raycast(transform.position, transform.TransformDirection(direction), distanceCheck,layerMask);
 
         if (frontRay)
         {
