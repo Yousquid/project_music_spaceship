@@ -552,9 +552,12 @@ MonoBehaviour:
   - Master
   Banks:
   - Bass
+  - Drum
   - Flute
   - French_Horn
   - Guzheng
+  - Spaeceship
+  - UI
   - Violin
   BanksToLoad: []
   LiveUpdatePort: 9264

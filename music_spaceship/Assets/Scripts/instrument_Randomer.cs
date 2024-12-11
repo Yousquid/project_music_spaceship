@@ -13,14 +13,27 @@ public class instrument_Randomer : MonoBehaviour
     public float buttonInterval = 1.5f;
     public bool isRecordPlayerInput = false;
     public List<string> playerInputList;
+    public bool isCheckingAnswer;
+    public Audio_Manager audio_manager;
 
+    //For Indicator
+    public GameObject indicator;
+    public Transform reference;
+    public float indicatorInterval;
+    public List<GameObject> indicatorList;
+
+    public FMODUnity.EventReference bgm;
     // Start is called before the first frame update
     void Start()
     {
-        initialateInputList();
+        audio_manager = GetComponent<Audio_Manager>();
         initiateInstrumentList();
-        initiateButtons();
+     //   initiateButtons();
         initiatePitchList();
+        ResetAudioSource();
+        initialateInputList();
+       // InitiateIndicators();
+        FMODUnity.RuntimeManager.PlayOneShot(bgm);
     }
 
     // Update is called once per frame
@@ -28,22 +41,30 @@ public class instrument_Randomer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            Shuffle(buttonAudioSourceList);
-            Shuffle(instrumentsSourceList);
+            
         }
 
         if (Input.GetKeyDown(KeyCode.B))
         {
             print(playerInputList[0]+ playerInputList[1]+ playerInputList[2]+ playerInputList[3] +playerInputList[4]);
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        isRecordPlayerInput = true;
+
+        //manageIndicators();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            resetInputList();
+            Application.Quit();
         }
 
     }
 
-
+    public void ResetAudioSource()
+    {
+        audio_manager.playCorrectSFX();
+        Shuffle(buttonAudioSourceList);
+        Shuffle(instrumentsSourceList);
+    }
     private void initiatePitchList()
     {
         buttonAudioSourceList.Add("Gong");
@@ -123,12 +144,81 @@ public class instrument_Randomer : MonoBehaviour
         playerInputList[4] = "0";
     }
 
-    public void detectIfInputListIsFull()
+    public bool detectIfInputListIsFull()
     {
         if (playerInputList.Count == 5 && playerInputList[4] != "0")
         {
-            resetInputList();
+            return true;
+        }
+        else return false;
+    }
+
+    public string CheckAnswer()
+    {
+      
+            if (playerInputList[0] == "Gong" && playerInputList[1] == "Shang" && playerInputList[2] == "Jue" && playerInputList[3] == "Zhi" && playerInputList[4] == "Yu")
+            {
+                return "forward";
+            }
+            else if (playerInputList[0] == "Jue" && playerInputList[1] == "Zhi" && playerInputList[2] == "Yu" && playerInputList[3] == "Drum" && playerInputList[4] == "Gong")
+            {
+                return "left";
+            }
+            else if (playerInputList[0] == "Yu" && playerInputList[1] == "Zhi" && playerInputList[2] == "Jue" && playerInputList[3] == "Drum" && playerInputList[4] == "Shang")
+            {
+                return "right";
+            }
+            else if (playerInputList[0] == "Gong" && playerInputList[1] == "Drum" && playerInputList[2] == "Jue" && playerInputList[3] == "Drum" && playerInputList[4] == "Yu")
+            {
+                return "shoot";
+            }
+            else { return "error"; }
+        }
+     
+    
+
+    public bool IsCheckingAnswer()
+    {
+        return isCheckingAnswer;
+    }
+    public void SetCheckingAnswerTrue()
+    {
+        isCheckingAnswer = true;
+    }
+    public void SetCheckingAnswerFalse()
+    {
+        isCheckingAnswer = false;
+        resetInputList();
+    }
+    void InitiateIndicators()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject temp_indicator = Instantiate(indicator);
+            temp_indicator.transform.position = reference.position;
+            temp_indicator.transform.position += new Vector3(indicatorInterval * i, 0, 0);
+            indicatorList.Add(temp_indicator);
+            temp_indicator.transform.SetParent(this.transform);
+            temp_indicator.layer = i + 6;
         }
     }
+
+    public int returnManageIndicators()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (playerInputList[i] != "0")
+            {
+                continue;
+
+            }
+            else if (playerInputList[i] == "0")
+            {
+                return i;
+            }
+        }
+
+        return -1;
+     }
 
 }

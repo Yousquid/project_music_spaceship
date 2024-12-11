@@ -7,6 +7,7 @@ public class Button : MonoBehaviour
 {
     public instrument_Randomer manager;
     public int buttonOrder;
+    public Audio_Manager audio_manager;
 
     public FMODUnity.EventReference frenchHornSound;
     FMOD.Studio.EventInstance frenchHornInstance;
@@ -48,7 +49,7 @@ public class Button : MonoBehaviour
     FMOD.Studio.EventInstance violinHighInstance;
     FMOD.Studio.PARAMETER_ID violinHighInstanceID;
 
-
+    public FMODUnity.EventReference drumSound;
 
     public FMOD.Studio.EventInstance currentMusicInstance;
 
@@ -60,6 +61,8 @@ public class Button : MonoBehaviour
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
+
+        audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
         // frenchHornLowFMOD();
         frenchHornInstance = initiateInstance(frenchHornSound, frenchHornInstance, frenchHornInstanceID,"french_horn");
         frenchHornInstanceID = initiateInstanceID(frenchHornSound, frenchHornInstance, frenchHornInstanceID, "french_horn");
@@ -92,15 +95,7 @@ public class Button : MonoBehaviour
         bassHighInstanceID = initiateInstanceID(bassHighSound, bassHighInstance, bassHighInstanceID, "bass_high");
     }
 
-    void frenchHornLowFMOD()
-    {
-        frenchHornInstance = FMODUnity.RuntimeManager.CreateInstance(frenchHornSound);
-        FMOD.Studio.EventDescription frenchHornSoundDescription;
-        frenchHornInstance.getDescription(out frenchHornSoundDescription);
-        FMOD.Studio.PARAMETER_DESCRIPTION frenchHornPramaterDescription;
-        frenchHornSoundDescription.getParameterDescriptionByName("french_horn", out frenchHornPramaterDescription);
-        frenchHornInstanceID = frenchHornPramaterDescription.id;
-    }
+    
 
     FMOD.Studio.EventInstance initiateInstance(FMODUnity.EventReference tempSound, FMOD.Studio.EventInstance tempInstance, FMOD.Studio.PARAMETER_ID tempID,string parameterName)
     {
@@ -131,19 +126,6 @@ public class Button : MonoBehaviour
 
     public void OnButtonClicked()
     {
-      /*  if (currentMusicInstance.isValid() && !hasStopped)
-        {
-            FMOD.Studio.PLAYBACK_STATE playbackState;
-            currentMusicInstance.getPlaybackState(out playbackState);
-
-            if (playbackState != FMOD.Studio.PLAYBACK_STATE.STOPPED)
-            {
-                currentMusicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-                currentMusicInstance.release(); // Release the instance to free resources
-                hasStopped = true;
-            }
-        } */
-
         manager.detectIfInputListIsFull();
 
         if (this.gameObject.layer == 6)
@@ -171,6 +153,12 @@ public class Button : MonoBehaviour
         {
             audioSourceCheckThenSetParameterPlaySound(4);
             recordButtonInputToManager(4);
+        }
+        else if (this.gameObject.layer == 0)
+        {
+            print("Drum");
+            FMODUnity.RuntimeManager.PlayOneShot(drumSound);
+            recordButtonInputToManager(1);
         }
     }
     
@@ -206,7 +194,6 @@ public class Button : MonoBehaviour
         if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
         {
             print(manager.buttonAudioSourceList[0]);
-            print(manager.instrumentsSourceList[0]);
             tempInstance.setParameterByID(findInstrumentAudioSourceID(), 1);
             currentMusicInstance = tempInstance;
             playSound(tempInstance);
@@ -353,6 +340,7 @@ public class Button : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) 
         {
+            audio_manager.playButtonSound();
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
@@ -365,85 +353,108 @@ public class Button : MonoBehaviour
 
     void recordButtonInputToManager(int buttonOrder)
     {
-        if (manager.playerInputBool())
-        {
 
-            if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
+        if (this.gameObject.layer == 0)
+        {
+            for (int i = 0; i < 5; i++)
             {
-                for (int i = 0; i < 5; i++)
+                if (manager.playerInputList[i] != "0")
                 {
-                    if (manager.playerInputList[i] != "0")
-                    {
-                        continue;
-                    }
-                    else if (manager.playerInputList[i] == "0")
-                    {
-                        manager.playerInputList[i] = "Gong";
-                        break;
-                    }
+                    continue;
                 }
-            }
-            if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
-            {
-                for (int i = 0; i < 5; i++)
+                else if (manager.playerInputList[i] == "0")
                 {
-                    if (manager.playerInputList[i] != "0")
-                    {
-                        continue;
-                    }
-                    else if (manager.playerInputList[i] == "0")
-                    {
-                        manager.playerInputList[i] = "Shang";
-                        break;
-                    }
-                }
-            }
-            if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (manager.playerInputList[i] != "0")
-                    {
-                        continue;
-                    }
-                    else if (manager.playerInputList[i] == "0")
-                    {
-                        manager.playerInputList[i] = "Jue";
-                        break;
-                    }
-                }
-            }
-            if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (manager.playerInputList[i] != "0")
-                    {
-                        continue;
-                    }
-                    else if (manager.playerInputList[i] == "0")
-                    {
-                        manager.playerInputList[i] = "Zhi";
-                        break;
-                    }
-                }
-            }
-            if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    if (manager.playerInputList[i] != "0")
-                    {
-                        continue;
-                    }
-                    else if (manager.playerInputList[i] == "0")
-                    {
-                        manager.playerInputList[i] = "Yu";
-                        break;
-                    }
+                    manager.playerInputList[i] = "Drum";
+                    return;
                 }
             }
         }
+        else if (manager.buttonAudioSourceList[buttonOrder] == "Gong")
+        {
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (manager.playerInputList[i] != "0")
+                {
+                    continue;
+                }
+                else if (manager.playerInputList[i] == "0")
+                {
+                    manager.playerInputList[i] = "Gong";
+                    break;
+                }
+            }
+        }
+        else if (manager.buttonAudioSourceList[buttonOrder] == "Shang")
+        {
+           
+            for (int i = 0; i < 5; i++)
+            {
+                if (manager.playerInputList[i] != "0")
+                {
+                    continue;
+                }
+                else if (manager.playerInputList[i] == "0")
+                {
+                    manager.playerInputList[i] = "Shang";
+                    break;
+                }
+            }
+        }
+        else if (manager.buttonAudioSourceList[buttonOrder] == "Jue")
+        {
+          
+            for (int i = 0; i < 5; i++)
+            {
+                if (manager.playerInputList[i] != "0")
+                {
+                    continue;
+                }
+                else if (manager.playerInputList[i] == "0")
+                {
+                    manager.playerInputList[i] = "Jue";
+                    break;
+                }
+            }
+        }
+        else if (manager.buttonAudioSourceList[buttonOrder] == "Zhi")
+        {
+            
+            for (int i = 0; i < 5; i++)
+            {
+                if (manager.playerInputList[i] != "0")
+                {
+                    continue;
+                }
+                else if (manager.playerInputList[i] == "0")
+                {
+                    manager.playerInputList[i] = "Zhi";
+                    break;
+                }
+            }
+        }
+        else if (manager.buttonAudioSourceList[buttonOrder] == "Yu")
+        {
+           
+            for (int i = 0; i < 5; i++)
+            {
+                if (manager.playerInputList[i] != "0")
+                {
+                    continue;
+                }
+                else if (manager.playerInputList[i] == "0")
+                {
+                    manager.playerInputList[i] = "Yu";
+                    break;
+                }
+            }
+        }
+        //  if (manager.playerInputBool())
+        //{
+
+
+
+        // }
     }
 
 }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - button
   - manager
+  - spaceship
+  - bullet
+  - asteroid
   layers:
   - Default
   - TransparentFX
@@ -18,8 +21,8 @@ TagManager:
   - button_three
   - button_four
   - button_five
-  - 
-  - 
+  - asteroids
+  - Indicator
   - 
   - 
   - 
@@ -42,4 +45,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Indicator
+    uniqueID: 3029923551
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 818091681
+    locked: 0
+  - name: asteroid
+    uniqueID: 1898252041
     locked: 0

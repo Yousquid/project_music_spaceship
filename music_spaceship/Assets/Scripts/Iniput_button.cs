@@ -5,15 +5,20 @@ using UnityEngine;
 public class Iniput_button : MonoBehaviour
 {
     public instrument_Randomer manager;
+    public Audio_Manager audio_manager;
+
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
+        audio_manager = FindNearestWithTag("manager").GetComponent<Audio_Manager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         buttonClickDetection();
+       
     }
 
 
@@ -21,20 +26,27 @@ public class Iniput_button : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            audio_manager.playButtonSound();
+
             Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             RaycastHit2D hit = Physics2D.Raycast(mousePos, Vector2.zero);
 
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
-                if (manager.playerInputBool())
-                {
-                    manager.resetInputList();
-                    manager.recordPlayerInputFlase();
-                }
-                else if (!manager.playerInputBool())
-                {
-                    manager.recordPlayerInputTrue();
-                }
+                //for (int i = 0; i < 5; i++)
+                //{
+                //    if (manager.playerInputList[i] != "0")
+                //    {
+                //        continue;
+                //    }
+                //    else if (manager.playerInputList[i] == "0")
+                //    {
+                //        return;
+                //    }
+                //}
+
+                manager.resetInputList();
+
             }
         }
     }
