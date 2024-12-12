@@ -25,7 +25,7 @@ public class bullet : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= 1.5f)
+        if (timer >= 0.5f)
         {
             Destroy(gameObject);
         }
@@ -49,23 +49,23 @@ public class bullet : MonoBehaviour
     {
         if (spaceship.GiveDirection() == "up")
         {
-            rigidbody.velocity += Vector2.up;
+            rigidbody.velocity += Vector2.up * 1.5F;
         }
         if (spaceship.GiveDirection() == "down")
         {
-            rigidbody.velocity += Vector2.down;
+            rigidbody.velocity += Vector2.down * 1.5F;
         }
         if (spaceship.GiveDirection() == "left")
         {
             this.transform.Rotate(0, 0, 90);
             this.transform.position += new Vector3(0, -0.4f, 0);
-            rigidbody.velocity += Vector2.left;
+            rigidbody.velocity += Vector2.left * 1.5F;
         }
         if (spaceship.GiveDirection() == "right")
         {
             this.transform.Rotate(0, 0, -90);
             this.transform.position += new Vector3(0, -0.4f, 0);
-            rigidbody.velocity += Vector2.right;
+            rigidbody.velocity += Vector2.right * 1.5F;
         }
     }
 

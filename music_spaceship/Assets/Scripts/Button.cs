@@ -502,7 +502,7 @@ public class Button : MonoBehaviour
         }
         if (manager.colorList[order] == "blue")
         {
-            sprite.color = new Color(0, 0, 255);
+            sprite.color = new Color(40, 50, 180);
         }
         if (manager.colorList[order] == "purple")
         {
