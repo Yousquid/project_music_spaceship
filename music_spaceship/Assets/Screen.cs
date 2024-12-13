@@ -14,7 +14,12 @@ public class Screen : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetTrigger("Press");
+            
         }
+    }
+
+    public void Anime()
+    {
+        anim.SetTrigger("Press");
     }
 }

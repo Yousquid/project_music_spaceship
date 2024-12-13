@@ -8,6 +8,7 @@ public class Button : MonoBehaviour
     public instrument_Randomer manager;
     public int buttonOrder;
     public Audio_Manager audio_manager;
+    public Screen screen;
 
     public SpriteRenderer sprite;
 
@@ -63,6 +64,8 @@ public class Button : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+
+        screen = FindNearestWithTag("screen").GetComponent<Screen>();
 
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
 
@@ -355,6 +358,7 @@ public class Button : MonoBehaviour
             if (hit.collider != null && hit.collider.gameObject == gameObject)
             {
                 audio_manager.playButtonSound();
+                screen.Anime();
                 OnButtonClicked();
             }
         }

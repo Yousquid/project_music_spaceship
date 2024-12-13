@@ -67,7 +67,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Bass.bank
   Name: Bass
   StudioPath: bank:/Bass
-  lastModified: 638695242374137544
+  lastModified: 638688849693807601
   FileSizes:
   - Name: Desktop
     Value: 168352
@@ -99,7 +99,7 @@ MonoBehaviour:
   - {fileID: -98947686927042635}
   MinDistance: 1
   MaxDistance: 20
-  Length: 1000
+  Length: 1600
 --- !u!114 &-6751694280988002023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638695242378273235
+  lastModified: 638695704881575184
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -397,7 +397,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Flute.bank
   Name: Flute
   StudioPath: bank:/Flute
-  lastModified: 638695242376574401
+  lastModified: 638688849695234348
   FileSizes:
   - Name: Desktop
     Value: 174976
@@ -453,7 +453,7 @@ MonoBehaviour:
   - {fileID: -6751694280988002023}
   MinDistance: 1
   MaxDistance: 20
-  Length: 1000
+  Length: 1600
 --- !u!114 &-757172364620149546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +581,7 @@ MonoBehaviour:
   - {fileID: -3534261746854796893}
   StringsBanks:
   - {fileID: 4178894571893586347}
-  cacheTime: 638695253663320141
+  cacheTime: 638695706761666175
   cacheVersion: 131621
 --- !u!114 &1031677376825282768
 MonoBehaviour:
@@ -598,7 +598,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Guzheng.bank
   Name: Guzheng
   StudioPath: bank:/Guzheng
-  lastModified: 638695253663320141
+  lastModified: 638688849698989353
   FileSizes:
   - Name: Desktop
     Value: 610816
@@ -618,7 +618,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Drum.bank
   Name: Drum
   StudioPath: bank:/Drum
-  lastModified: 638695242375655233
+  lastModified: 638695678673853263
   FileSizes:
   - Name: Desktop
     Value: 6912
@@ -690,7 +690,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/UI.bank
   Name: UI
   StudioPath: bank:/UI
-  lastModified: 638695251815248745
+  lastModified: 638695706761666175
   FileSizes:
   - Name: Desktop
     Value: 235520
@@ -761,7 +761,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638695242378298513
+  lastModified: 638695704881600308
   FileSizes:
   - Name: Desktop
     Value: 2594
@@ -836,7 +836,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/French_Horn.bank
   Name: French_Horn
   StudioPath: bank:/French_Horn
-  lastModified: 638695242377549439
+  lastModified: 638688849695890199
   FileSizes:
   - Name: Desktop
     Value: 182464
@@ -911,7 +911,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Spaeceship.bank
   Name: Spaeceship
   StudioPath: bank:/Spaeceship
-  lastModified: 638695242379517063
+  lastModified: 638695686694877049
   FileSizes:
   - Name: Desktop
     Value: 52928
@@ -985,7 +985,7 @@ MonoBehaviour:
   Path: FMOD/audio/Build/Desktop/Violin.bank
   Name: Violin
   StudioPath: bank:/Violin
-  lastModified: 638695242383662522
+  lastModified: 638688849700382609
   FileSizes:
   - Name: Desktop
     Value: 229632
