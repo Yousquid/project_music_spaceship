@@ -10,6 +10,7 @@ TagManager:
   - bullet
   - asteroid
   - panel_circle
+  - screen
   layers:
   - Default
   - TransparentFX
