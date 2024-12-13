@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class Spaceship_Controllor : MonoBehaviour
 {
     private instrument_Randomer manager;
@@ -12,6 +13,7 @@ public class Spaceship_Controllor : MonoBehaviour
     public LayerMask layerMask;
     private Vector2 direction;
     public Audio_Manager audio_manager;
+    public GameObject text;
     void Start()
     {
         manager = FindNearestWithTag("manager").GetComponent<instrument_Randomer>();
@@ -147,6 +149,14 @@ public class Spaceship_Controllor : MonoBehaviour
         }
        
     }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        
+    }
+    
+        
+    
 
     public string GiveDirection()
     {

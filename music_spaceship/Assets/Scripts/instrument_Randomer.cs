@@ -30,7 +30,7 @@ public class instrument_Randomer : MonoBehaviour
         initiateInstrumentList();
      //   initiateButtons();
         initiatePitchList();
-        ResetAudioSource();
+     //   ResetAudioSource();
         initialateInputList();
        // InitiateIndicators();
         FMODUnity.RuntimeManager.PlayOneShot(bgm);
