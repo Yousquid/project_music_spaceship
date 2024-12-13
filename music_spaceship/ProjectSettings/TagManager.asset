@@ -58,3 +58,6 @@ TagManager:
   - name: asteroid
     uniqueID: 1898252041
     locked: 0
+  - name: New Layer 4
+    uniqueID: 3853474549
+    locked: 0

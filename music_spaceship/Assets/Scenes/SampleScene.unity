@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 37148823}
   - component: {fileID: 37148822}
   - component: {fileID: 37148824}
-  - component: {fileID: 37148825}
+  - component: {fileID: 37148826}
   m_Layer: 12
   m_Name: Guide_Book
   m_TagString: Untagged
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32882810b97fd2b4a9d39ec309196419, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -203,7 +203,7 @@ Transform:
   m_GameObject: {fileID: 37148821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.42, y: 1.36, z: 0}
+  m_LocalPosition: {x: 0.21, y: -0.93, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audio_manager: {fileID: 130884025}
   guidebook: {fileID: 772864440}
---- !u!60 &37148825
+--- !u!60 &37148826
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -259,7 +259,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -267,10 +267,50 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
+    - - {x: 3.7099998, y: 1.37}
+      - {x: 3.87, y: 1.41}
+      - {x: 4.0099998, y: 1.54}
+      - {x: 4.22, y: 1.7199999}
+      - {x: 4.39, y: 1.8499999}
+      - {x: 4.58, y: 2.02}
+      - {x: 4.7799997, y: 2.18}
+      - {x: 4.88, y: 2.29}
+      - {x: 4.88, y: 2.47}
+      - {x: 4.8399997, y: 2.59}
+      - {x: 4.87, y: 2.61}
+      - {x: 4.88, y: 2.6799998}
+      - {x: 4.88, y: 2.71}
+      - {x: 4.81, y: 2.76}
+      - {x: 4.66, y: 2.79}
+      - {x: 4.47, y: 2.86}
+      - {x: 4.14, y: 2.9199998}
+      - {x: 3.99, y: 2.95}
+      - {x: 3.82, y: 2.98}
+      - {x: 3.6599998, y: 2.98}
+      - {x: 3.57, y: 2.97}
+      - {x: 3.51, y: 2.9299998}
+      - {x: 3.36, y: 2.81}
+      - {x: 3.23, y: 2.7}
+      - {x: 3.07, y: 2.57}
+      - {x: 2.82, y: 2.36}
+      - {x: 2.62, y: 2.2}
+      - {x: 2.51, y: 2.08}
+      - {x: 2.51, y: 2.02}
+      - {x: 2.52, y: 1.9699999}
+      - {x: 2.51, y: 1.8399999}
+      - {x: 2.51, y: 1.65}
+      - {x: 2.53, y: 1.62}
+      - {x: 2.61, y: 1.5799999}
+      - {x: 2.87, y: 1.52}
+      - {x: 3.1799998, y: 1.4499999}
+      - {x: 3.31, y: 1.42}
+      - {x: 3.35, y: 1.42}
+      - {x: 3.35, y: 1.02}
+      - {x: 3.37, y: 1}
+      - {x: 3.3999999, y: 1.01}
+      - {x: 3.51, y: 1.23}
+      - {x: 3.56, y: 1.39}
+      - {x: 3.58, y: 1.37}
   m_UseDelaunayMesh: 0
 --- !u!1001 &69009410
 PrefabInstance:
@@ -2079,7 +2119,7 @@ MonoBehaviour:
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 00000000dff698b4a116c33009072571
+  m_ApplyToSortingLayers: 00000000dff698b4a116c33009072571f55aafe5
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -3802,8 +3842,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -441492747
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ba30197ac018eea4daf9ab84761d0406, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5469,9 +5509,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1898252041
+  m_SortingLayer: 3
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 55d50a35e3e8cd14390ddb30942780f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
