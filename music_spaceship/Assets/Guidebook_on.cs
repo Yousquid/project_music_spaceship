@@ -16,6 +16,12 @@ public class Guidebook_on : MonoBehaviour
     void Update()
     {
         buttonClickDetection();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            guidebook.SetActive(false);
+
+        }
     }
     void buttonClickDetection()
     {

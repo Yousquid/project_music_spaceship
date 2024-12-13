@@ -31,7 +31,7 @@ public class Destination : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Delete))
+        if (Input.GetKeyDown(KeyCode.Minus))
         {
             SceneManager.LoadScene(0);
         }
